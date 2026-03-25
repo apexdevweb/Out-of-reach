@@ -1,0 +1,32 @@
+%reset-marg-pad {
+  margin: 0;
+  padding: 0;
+}
+%globale-size {
+  height: auto;
+  width: 100%;
+}
+%flex-row-center {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: center;
+  place-content: center space-evenly;
+}
+%flex-row-end {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: flex-end;
+  place-content: center space-evenly;
+}
+%flex-column-center {
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: center;
+  place-content: center space-evenly;
+}
+%flex-column-start {
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: flex-start;
+  place-content: center space-evenly;
+}

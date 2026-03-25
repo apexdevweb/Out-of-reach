@@ -1,0 +1,280 @@
+@use "base/typo";
+@use "components/variables";
+@use "components/placeholders";
+@use "components/mixins";
+@use "abstract/keyframes";
+html {
+  overflow-x: hidden;
+}
+body {
+  @extend %reset-marg-pad;
+  box-sizing: border-box;
+  & .shield__vid {
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    z-index: 0;
+  }
+  & header {
+    @extend %reset-marg-pad, %flex-row-center;
+    height: 8vh;
+    width: 99.8%;
+    position: absolute;
+    top: 0;
+    border: 1px solid #444;
+    & .primary__title {
+      margin-left: 0;
+      color: #fff;
+      font-family: variables.$font-alpha;
+      font-size: 4rem;
+      font-weight: 500;
+      z-index: 99;
+      position: relative;
+      line-height: 70px;
+    }
+    & .globale__nav--container {
+      @extend %reset-marg-pad, %flex-row-center;
+      height: auto;
+      width: 70%;
+      & .nave__sub--container {
+        @extend %reset-marg-pad, %flex-row-center;
+        height: auto;
+        width: 70%;
+      }
+    }
+    & .small__subtitle--container {
+      @extend %reset-marg-pad, %flex-row-center;
+      height: auto;
+      width: 80%;
+      & .subtitle__el {
+        padding: 3px;
+        height: auto;
+        width: 25%;
+        list-style-type: none;
+        color: #899;
+        font-family: variables.$font-ceta;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-shadow: 0px 0px 3px #000;
+        text-align: center;
+        z-index: 99;
+        & .flag__arrow {
+          font-size: 2rem;
+          color: #fff;
+          z-index: 99;
+          &:hover {
+            cursor: pointer;
+            color: #899;
+            text-shadow: 0px 0px 5px #fff;
+          }
+        }
+        & .flag__container {
+          display: none;
+          & .flag {
+            height: 30px;
+            width: auto;
+            filter: contrast(100%);
+            &:hover {
+              cursor: pointer;
+              filter: drop-shadow(0px 0px 5px #fff);
+            }
+          }
+          &.addview {
+            position: absolute;
+            @extend %flex-row-center;
+            flex-shrink: 0;
+            height: auto;
+            width: 8vw;
+          }
+        }
+        & .logo__data {
+          position: relative;
+          height: 6vh;
+          width: auto;
+        }
+        & #mouse_data {
+          top: 15%;
+          left: 87%;
+          position: absolute;
+          width: 6ch;
+        }
+      }
+    }
+  }
+  & .shield__container {
+    @extend %reset-marg-pad, %globale-size;
+    overflow: hidden;
+    & .shield__hero--wrapper {
+      @extend %reset-marg-pad, %flex-column-center;
+      height: 99vh;
+      width: 100%;
+      top: 0;
+      position: absolute;
+      & .hero__img--container {
+        display: block;
+        height: 80vh;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+        overflow-x: hidden;
+        text-align: left;
+        & .shield__effect--A {
+          position: absolute;
+          top: 80px;
+          left: 0;
+          height: 60vh;
+          width: auto;
+          mix-blend-mode: overlay;
+          filter: contrast(140%);
+          -webkit-mask-image: radial-gradient(
+            circle,
+            black 15%,
+            transparent 65%
+          );
+          mask-image: radial-gradient(circle, black 15%, transparent 65%);
+          z-index: 0;
+        }
+        & .shield__effect--C {
+          position: absolute;
+          top: 50px;
+          left: 20vw;
+          height: 70vh;
+          width: auto;
+          mix-blend-mode: screen;
+          filter: contrast(140%);
+          -webkit-mask-image: radial-gradient(
+            circle,
+            black 15%,
+            transparent 65%
+          );
+          mask-image: radial-gradient(circle, black 15%, transparent 65%);
+          z-index: 0;
+          animation: glitch-anim-flash 6s infinite linear;
+        }
+        & .shield__effect--B {
+          position: absolute;
+          top: 30px;
+          left: 55%;
+          height: 80vh;
+          width: auto;
+          mix-blend-mode: screen;
+          filter: contrast(140%);
+          -webkit-mask-image: radial-gradient(
+            circle,
+            black 15%,
+            transparent 65%
+          );
+          mask-image: radial-gradient(circle, black 15%, transparent 65%);
+          animation: glitch-anim-flash 6s infinite linear 1.5s;
+        }
+      }
+      & .shield__hero--content {
+        @extend %flex-row-end, %globale-size;
+        padding: 0;
+        margin-top: 0;
+        margin-left: 0;
+        z-index: 99;
+        position: absolute;
+        bottom: 0;
+        & .shield__hero--logo {
+          margin: 0;
+          padding: 0;
+          height: 30vh;
+          width: auto;
+          filter: drop-shadow(0px 0px 5px #000);
+        }
+        & .hero__sub--content {
+          @extend %flex-column-center;
+          padding: 0;
+          margin: 0 0 0 0;
+          height: auto;
+          width: 55%;
+          & .shield__hero--sectorInfo {
+            @extend %reset-marg-pad;
+            color: #899;
+            font-family: variables.$font-ceta;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-shadow: 0px 0px 3px #000;
+          }
+          & .shield__hero--slogan {
+            margin: auto;
+            color: #fff;
+            font-family: variables.$font-alpha;
+            font-size: 7.5rem;
+            font-weight: 500;
+            width: 17ch;
+            line-height: 110px;
+            text-align: left;
+            & .shield__hero--signature {
+              font-family: variables.$font-beta;
+              font-size: 1rem;
+              font-weight: 400;
+              width: auto;
+            }
+          }
+        }
+
+        & .shield__form {
+          @extend %flex-column-center;
+          height: auto;
+          width: 25%;
+          overflow: hidden;
+          border: none;
+          & legend {
+            color: #899;
+            font-family: variables.$font-ceta;
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 0px 0px 3px #000;
+          }
+          & form {
+            @extend %flex-column-center;
+            height: 25vh;
+            width: 100%;
+            & input[type="text"] {
+              height: 4.5vh;
+              width: auto;
+              background: transparent;
+              border: 1px solid #899;
+              border-radius: 10px;
+              color: red;
+              font-family: variables.$font-beta;
+              font-size: 1.1rem;
+              letter-spacing: 2px;
+              text-shadow: 0px 0px 3px #000;
+            }
+            & input[type="submit"] {
+              height: 4vh;
+              width: 6vw;
+              background: transparent;
+              border-radius: 5px;
+              border: 2px solid #fff;
+              color: #899;
+              font-size: 1.2rem;
+              font-family: variables.$font-alpha;
+              letter-spacing: 2px;
+              transition: background-color 0.3s ease-in-out;
+              &:hover {
+                color: #fff;
+                background-color: #000;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  & .home__container {
+    @extend %reset-marg-pad;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000;
+  
+  }
+}

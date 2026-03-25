@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+body, body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container {
+  margin: 0;
+  padding: 0;
+}
+
+body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content {
+  height: auto;
+  width: 100%;
+}
+
+body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .small__subtitle--container, body header .small__subtitle--container .subtitle__el .flag__container.addview {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: center;
+  place-content: center space-evenly;
+}
+
+body .shield__container .shield__hero--wrapper .shield__hero--content {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: flex-end;
+  place-content: center space-evenly;
+}
+
+body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form {
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: center;
+  place-content: center space-evenly;
+}
+
+@keyframes glitch-anim-flash {
+  0% {
+    opacity: 0.6;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  35%, 100% {
+    opacity: 0;
+  }
+}
+html {
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+}
+body .shield__vid {
+  height: auto;
+  width: 100%;
+  margin-top: 0;
+  z-index: 0;
+}
+body header {
+  height: 8vh;
+  width: 99.8%;
+  position: absolute;
+  top: 0;
+  border: 1px solid #444;
+}
+body header .primary__title {
+  margin-left: 0;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  z-index: 99;
+  position: relative;
+  line-height: 70px;
+}
+body header .globale__nav--container {
+  height: auto;
+  width: 70%;
+}
+body header .globale__nav--container .nave__sub--container {
+  height: auto;
+  width: 70%;
+}
+body header .small__subtitle--container {
+  height: auto;
+  width: 80%;
+}
+body header .small__subtitle--container .subtitle__el {
+  padding: 3px;
+  height: auto;
+  width: 25%;
+  list-style-type: none;
+  color: #899;
+  font-family: "Google Sans Code", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 3px #000;
+  text-align: center;
+  z-index: 99;
+}
+body header .small__subtitle--container .subtitle__el .flag__arrow {
+  font-size: 2rem;
+  color: #fff;
+  z-index: 99;
+}
+body header .small__subtitle--container .subtitle__el .flag__arrow:hover {
+  cursor: pointer;
+  color: #899;
+  text-shadow: 0px 0px 5px #fff;
+}
+body header .small__subtitle--container .subtitle__el .flag__container {
+  display: none;
+}
+body header .small__subtitle--container .subtitle__el .flag__container .flag {
+  height: 30px;
+  width: auto;
+  filter: contrast(100%);
+}
+body header .small__subtitle--container .subtitle__el .flag__container .flag:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 5px #fff);
+}
+body header .small__subtitle--container .subtitle__el .flag__container.addview {
+  position: absolute;
+  flex-shrink: 0;
+  height: auto;
+  width: 8vw;
+}
+body header .small__subtitle--container .subtitle__el .logo__data {
+  position: relative;
+  height: 6vh;
+  width: auto;
+}
+body header .small__subtitle--container .subtitle__el #mouse_data {
+  top: 15%;
+  left: 87%;
+  position: absolute;
+  width: 6ch;
+}
+body .shield__container {
+  overflow: hidden;
+}
+body .shield__container .shield__hero--wrapper {
+  height: 99vh;
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+body .shield__container .shield__hero--wrapper .hero__img--container {
+  display: block;
+  height: 80vh;
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  overflow-x: hidden;
+  text-align: left;
+}
+body .shield__container .shield__hero--wrapper .hero__img--container .shield__effect--A {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  height: 60vh;
+  width: auto;
+  mix-blend-mode: overlay;
+  filter: contrast(140%);
+  -webkit-mask-image: radial-gradient(circle, black 15%, transparent 65%);
+  mask-image: radial-gradient(circle, black 15%, transparent 65%);
+  z-index: 0;
+}
+body .shield__container .shield__hero--wrapper .hero__img--container .shield__effect--C {
+  position: absolute;
+  top: 50px;
+  left: 20vw;
+  height: 70vh;
+  width: auto;
+  mix-blend-mode: screen;
+  filter: contrast(140%);
+  -webkit-mask-image: radial-gradient(circle, black 15%, transparent 65%);
+  mask-image: radial-gradient(circle, black 15%, transparent 65%);
+  z-index: 0;
+  animation: glitch-anim-flash 6s infinite linear;
+}
+body .shield__container .shield__hero--wrapper .hero__img--container .shield__effect--B {
+  position: absolute;
+  top: 30px;
+  left: 55%;
+  height: 80vh;
+  width: auto;
+  mix-blend-mode: screen;
+  filter: contrast(140%);
+  -webkit-mask-image: radial-gradient(circle, black 15%, transparent 65%);
+  mask-image: radial-gradient(circle, black 15%, transparent 65%);
+  animation: glitch-anim-flash 6s infinite linear 1.5s;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content {
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0;
+  z-index: 99;
+  position: absolute;
+  bottom: 0;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__hero--logo {
+  margin: 0;
+  padding: 0;
+  height: 30vh;
+  width: auto;
+  filter: drop-shadow(0px 0px 5px #000);
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content {
+  padding: 0;
+  margin: 0 0 0 0;
+  height: auto;
+  width: 55%;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo {
+  color: #899;
+  font-family: "Google Sans Code", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 3px #000;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--slogan {
+  margin: auto;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 7.5rem;
+  font-weight: 500;
+  width: 17ch;
+  line-height: 110px;
+  text-align: left;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--slogan .shield__hero--signature {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  width: auto;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form {
+  height: auto;
+  width: 25%;
+  overflow: hidden;
+  border: none;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form legend {
+  color: #899;
+  font-family: "Google Sans Code", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 3px #000;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form {
+  height: 25vh;
+  width: 100%;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form input[type=text] {
+  height: 4.5vh;
+  width: auto;
+  background: transparent;
+  border: 1px solid #899;
+  border-radius: 10px;
+  color: red;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 3px #000;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form input[type=submit] {
+  height: 4vh;
+  width: 6vw;
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  color: #899;
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  transition: background-color 0.3s ease-in-out;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form input[type=submit]:hover {
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
+body .home__container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+}
+
+/*# sourceMappingURL=main.css.map */

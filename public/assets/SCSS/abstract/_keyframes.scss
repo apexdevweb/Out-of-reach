@@ -1,0 +1,15 @@
+@keyframes glitch-anim-flash {
+    0% {
+      opacity: 0.6;
+    }
+    15% {
+      opacity: 0.3;
+    }
+    25% {
+      opacity: 0.2;
+    }
+    35%,
+    100% {
+      opacity: 0;
+    }
+  }

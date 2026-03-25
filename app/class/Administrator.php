@@ -1,0 +1,27 @@
+<?php
+class Administrator
+{
+
+  private int $admin_id;
+  private string $admin_name;
+  private string $admin_key;
+
+  public function __construct(int $adminId, string $adminName, string $adminKey)
+  {
+    $this->admin_id = $adminId;
+    $this->admin_name = $adminName;
+    $this->admin_key = $adminKey;
+  }
+  public function getAdminId(): int
+  {
+    return $this->admin_id;
+  }
+  public function getAdminName(): string
+  {
+    return $this->admin_name;
+  }
+  public function getAdminKey(): string
+  {
+    return $this->admin_key;
+  }
+}
