@@ -1,0 +1,11 @@
+<div class="profil__card">
+  <div class="profil__sub--container">
+    <span class="profil__stickers">Admin</span>
+    <h2 class="profil__name"><?= $_SESSION['admin_data']['admin_name'] ?></h2>
+  </div>
+  <hr class="profil__separate">
+  <div class="profil__btn--container">
+    <a href="index.php?page=administration" class="profil__btn">Administration</a>
+    <a href="index.php?page=logout" class="profil__btn">Logout</a>
+  </div>
+</div>

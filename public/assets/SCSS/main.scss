@@ -9,6 +9,7 @@ html {
 body {
   @extend %reset-marg-pad;
   box-sizing: border-box;
+  background-color: #000;
   & .shield__vid {
     height: auto;
     width: 100%;
@@ -17,8 +18,8 @@ body {
   }
   & header {
     @extend %reset-marg-pad, %flex-row-center;
-    height: 8vh;
-    width: 99.8%;
+    height: auto;
+    width: 100%;
     position: absolute;
     top: 0;
     border: 1px solid #444;
@@ -26,7 +27,7 @@ body {
       margin-left: 0;
       color: #fff;
       font-family: variables.$font-alpha;
-      font-size: 4rem;
+      font-size: 3.5rem;
       font-weight: 500;
       z-index: 99;
       position: relative;
@@ -36,12 +37,91 @@ body {
       @extend %reset-marg-pad, %flex-row-center;
       height: auto;
       width: 70%;
+      overflow: hidden;
       & .nave__sub--container {
         @extend %reset-marg-pad, %flex-row-center;
         height: auto;
-        width: 70%;
+        width: 100%;
+        & .nav__el {
+          height: auto;
+          width: auto;
+          list-style-type: none;
+          & a {
+            font-family: variables.$font-beta;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 2px;
+          }
+        }
       }
     }
+    & .profil__card {
+      @extend %flex-column-center;
+      height: auto;
+      width: auto;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      padding: 3px;
+      margin: auto;
+      background: url("../images/eyesOFR.png") no-repeat 100% 90%;
+      background-size: 20%;
+      & .profil__sub--container {
+        @extend %reset-marg-pad, %flex-row-center;
+        height: auto;
+        width: auto;
+        overflow: hidden;
+        & .profil__stickers {
+          height: auto;
+          width: auto;
+          background-color: greenyellow;
+          border-radius: 5px;
+          box-shadow: 0px 0px 8px greenyellow;
+          color: #000;
+          font-family: variables.$font-beta;
+          font-size: 0.8rem;
+          font-weight: 400;
+          margin: 10px;
+          padding: 3px;
+          letter-spacing: 2px;
+        }
+        & .profil__name {
+          color: #fff;
+          font-family: variables.$font-beta;
+          font-size: 1.2rem;
+          font-weight: 500;
+          letter-spacing: 1px;
+          text-shadow: 0px 0px 3px #000;
+        }
+      }
+      & .profil__separate {
+        margin: 0;
+        height: 2px;
+        width: 50%;
+        background-color: #fff;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px #000;
+      }
+      & .profil__btn--container {
+        @extend %reset-marg-pad, %flex-row-center;
+        & .profil__btn {
+          margin: 8px;
+          color: #fff;
+          font-family: variables.$font-beta;
+          font-size: 1rem;
+          font-weight: 400;
+          text-decoration: none;
+          letter-spacing: 1px;
+          text-shadow: 0px 0px 3px #000;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
     & .small__subtitle--container {
       @extend %reset-marg-pad, %flex-row-center;
       height: auto;
@@ -89,13 +169,14 @@ body {
           }
         }
         & .logo__data {
+          margin: 0;
           position: relative;
           height: 6vh;
           width: auto;
         }
         & #mouse_data {
-          top: 15%;
-          left: 87%;
+          top: 28%;
+          left: 86%;
           position: absolute;
           width: 6ch;
         }
@@ -121,7 +202,7 @@ body {
         text-align: left;
         & .shield__effect--A {
           position: absolute;
-          top: 80px;
+          top: 149px;
           left: 0;
           height: 60vh;
           width: auto;
@@ -154,7 +235,7 @@ body {
         }
         & .shield__effect--B {
           position: absolute;
-          top: 30px;
+          top: 80px;
           left: 55%;
           height: 80vh;
           width: auto;
@@ -271,10 +352,33 @@ body {
     }
   }
   & .home__container {
-    @extend %reset-marg-pad;
-    min-height: 100vh;
+    margin-top: 16vh;
+    height: 100vh;
     width: 100%;
-    background-color: #000;
-  
+    background: #000 url("../images/dogsWhite.png") no-repeat 50% 50%;
+    background-size: 25%;
+    z-index: 0;
+    & .users__list--container {
+      min-height: 8vh;
+      width: 100%;
+      border: 1px solid #444;
+    }
+    & .sector__container {
+      @extend %globale-size, %flex-row-center;
+      & .sector__choice {
+        @extend %flex-column-center;
+        min-height: 25vh;
+        width: 25%;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        & .sector__choice--title {
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: 400;
+          letter-spacing: 2px;
+          font-family: variables.$font-alpha;
+        }
+      }
+    }
   }
 }

@@ -1,7 +1,8 @@
 <h1 class="primary__title"><?= DataText::PRIMARY_TITLE ?></h1>
 <?php
 if (isset($_SESSION['auth_admin']) && isset($_SESSION['admin_data']['admin_key'])) {
-  require_once __DIR__ . '../_nav.php';
+  require_once __DIR__ . '/_nav.php';
+  require_once __DIR__ . '/_admin_profil.php';
 } else {
 ?>
 <ul class="small__subtitle--container">

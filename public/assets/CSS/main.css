@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
-body, body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container {
+body, body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .profil__card .profil__sub--container, body header .profil__card .profil__btn--container, body header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo {
   margin: 0;
   padding: 0;
 }
 
-body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content {
+body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container {
   height: auto;
   width: 100%;
 }
 
-body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .small__subtitle--container, body header .small__subtitle--container .subtitle__el .flag__container.addview {
+body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .profil__card .profil__sub--container, body header .profil__card .profil__btn--container, body header .small__subtitle--container, body header .small__subtitle--container .subtitle__el .flag__container.addview, body .home__container .sector__container {
   display: flex;
   flex-flow: row nowrap;
   place-items: center;
@@ -23,7 +23,7 @@ body .shield__container .shield__hero--wrapper .shield__hero--content {
   place-content: center space-evenly;
 }
 
-body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form {
+body header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container .sector__choice {
   display: flex;
   flex-flow: column nowrap;
   place-items: center;
@@ -50,6 +50,7 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: #000;
 }
 body .shield__vid {
   height: auto;
@@ -58,8 +59,8 @@ body .shield__vid {
   z-index: 0;
 }
 body header {
-  height: 8vh;
-  width: 99.8%;
+  height: auto;
+  width: 100%;
   position: absolute;
   top: 0;
   border: 1px solid #444;
@@ -68,7 +69,7 @@ body header .primary__title {
   margin-left: 0;
   color: #fff;
   font-family: "Oswald", sans-serif;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 500;
   z-index: 99;
   position: relative;
@@ -77,10 +78,83 @@ body header .primary__title {
 body header .globale__nav--container {
   height: auto;
   width: 70%;
+  overflow: hidden;
 }
 body header .globale__nav--container .nave__sub--container {
   height: auto;
-  width: 70%;
+  width: 100%;
+}
+body header .globale__nav--container .nave__sub--container .nav__el {
+  height: auto;
+  width: auto;
+  list-style-type: none;
+}
+body header .globale__nav--container .nave__sub--container .nav__el a {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+body header .profil__card {
+  height: auto;
+  width: auto;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 3px;
+  margin: auto;
+  background: url("../images/eyesOFR.png") no-repeat 100% 90%;
+  background-size: 20%;
+}
+body header .profil__card .profil__sub--container {
+  height: auto;
+  width: auto;
+  overflow: hidden;
+}
+body header .profil__card .profil__sub--container .profil__stickers {
+  height: auto;
+  width: auto;
+  background-color: greenyellow;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px greenyellow;
+  color: #000;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 10px;
+  padding: 3px;
+  letter-spacing: 2px;
+}
+body header .profil__card .profil__sub--container .profil__name {
+  color: #fff;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 3px #000;
+}
+body header .profil__card .profil__separate {
+  margin: 0;
+  height: 2px;
+  width: 50%;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px #000;
+}
+body header .profil__card .profil__btn--container .profil__btn {
+  margin: 8px;
+  color: #fff;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 3px #000;
+}
+body header .profil__card .profil__btn--container .profil__btn:hover {
+  text-decoration: underline;
 }
 body header .small__subtitle--container {
   height: auto;
@@ -129,13 +203,14 @@ body header .small__subtitle--container .subtitle__el .flag__container.addview {
   width: 8vw;
 }
 body header .small__subtitle--container .subtitle__el .logo__data {
+  margin: 0;
   position: relative;
   height: 6vh;
   width: auto;
 }
 body header .small__subtitle--container .subtitle__el #mouse_data {
-  top: 15%;
-  left: 87%;
+  top: 28%;
+  left: 86%;
   position: absolute;
   width: 6ch;
 }
@@ -159,7 +234,7 @@ body .shield__container .shield__hero--wrapper .hero__img--container {
 }
 body .shield__container .shield__hero--wrapper .hero__img--container .shield__effect--A {
   position: absolute;
-  top: 80px;
+  top: 149px;
   left: 0;
   height: 60vh;
   width: auto;
@@ -184,7 +259,7 @@ body .shield__container .shield__hero--wrapper .hero__img--container .shield__ef
 }
 body .shield__container .shield__hero--wrapper .hero__img--container .shield__effect--B {
   position: absolute;
-  top: 30px;
+  top: 80px;
   left: 55%;
   height: 80vh;
   width: auto;
@@ -288,9 +363,30 @@ body .shield__container .shield__hero--wrapper .shield__hero--content .shield__f
   cursor: pointer;
 }
 body .home__container {
-  min-height: 100vh;
+  margin-top: 16vh;
+  height: 100vh;
   width: 100%;
-  background-color: #000;
+  background: #000 url("../images/dogsWhite.png") no-repeat 50% 50%;
+  background-size: 25%;
+  z-index: 0;
+}
+body .home__container .users__list--container {
+  min-height: 8vh;
+  width: 100%;
+  border: 1px solid #444;
+}
+body .home__container .sector__container .sector__choice {
+  min-height: 25vh;
+  width: 25%;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+body .home__container .sector__container .sector__choice .sector__choice--title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: "Oswald", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

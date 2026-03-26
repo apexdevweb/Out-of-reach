@@ -2,6 +2,7 @@
 const AVAILABLE_ROUTES = [
   'guard' => 'ShieldController',
   'home' => 'HomeController',
+  'administration' => 'AdminController',
   'users' => 'UsersController',
   'logout' => 'LogoutController',
 ];
@@ -17,7 +18,7 @@ if (!array_key_exists($page, AVAILABLE_ROUTES)) {
 }
 
 //on stocke les pages avec connexion requise (SESSION) dans un tableau
-$protected_private_page = ['home', 'users', 'logout'];
+$protected_private_page = ['home', 'administration', 'logout'];
 
 //on verifie que la page demander par l'utilisateur figure biens dans le tableau de pages avec connexion requise
 if (in_array($page, $protected_private_page)) {
@@ -47,8 +48,8 @@ if (file_exists($controllerFile)) {
     $app->guardPage();
   } elseif ($page === 'home') {
     $app->homePage();
-  } elseif ($page === 'users') {
-    $app->userPage();
+  } elseif ($page === 'administration') {
+    $app->adminPage();
   } elseif ($page === 'logout') {
     $app->logoutPage();
   }

@@ -18,4 +18,6 @@ class DataText
   public const LOGOUT_LINK = "Logout";
   public const ERROR_KEY = "Invalide key go retry";
   public const SIGNATURE = "Powered by ScriptEnjoyer";
+  public const SECTOR_DEFENCE = "Defensive-Security";
+  public const SECTOR_ATTACK = "Offensive-Security";
 }

@@ -1,7 +1,7 @@
 <nav class="globale__nav--container">
   <ul class="nave__sub--container">
-    <li><a href="#">Tools</a></li>
-    <li><a href="#">Tips</a></li>
-    <li><a href="#">Forum</a></li>
+    <li class="nav__el"><a href="#">Tools</a></li>
+    <li class="nav__el"><a href="#">Tips</a></li>
+    <li class="nav__el"><a href="#">Forum</a></li>
   </ul>
 </nav>

@@ -1,8 +1,8 @@
 <?php
-// Tes deux clés secrètes (32 octets pour l'AES, 32 octets pour le HMAC)
+// Les deux clés secrètes (32 octets pour l'AES, 32 octets pour le HMAC)
 // Conseil : Utilise des clés différentes pour le chiffrement et la signature
 $encryptionKey = "cle_secrete_chiffrement_32_char!";
-$hmacKey       = "cle_secrete_signature_32_chars!!";
+$hmacKey = "cle_secrete_signature_32_chars!!";
 
 /**
  * Chiffre ET signe une URL
