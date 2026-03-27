@@ -47,4 +47,15 @@ class ShieldController
       }
     }
   }
+  public function viewVisits(): void
+  {
+    if (isset($_SERVER['REMOTE_ADDR']) && !empty($_SERVER['REMOTE_ADDR'])) {
+     
+      $ip_visit = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP);
+      $date_visit = date("Y-m-d");
+      $visit_management = new ShieldManager();
+      $visit_management->insertVisits($ip_visit);
+      
+    }
+  }
 }

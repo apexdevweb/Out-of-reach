@@ -27,6 +27,18 @@ class ShieldManager
       return false;
     }
   }
+  
+  public function insertVisits(string $ip_visit): void
+  {
+    if (!empty($ip_visit)) {
+      try {
+          $insert_ip = $this->bdd->prepare("INSERT INTO visits (adresse_visit, date_visit) VALUES (?,?)");
+          $insert_ip->execute([$ip_visit, $date_visit]);
+      } catch (PDOException $e) {
+          echo "Erreur d'insertion de l'adresse ip" . $e->getMessage();
+      }
+  }
+  }
   // public function usersAccess(): void
   // {
   //   try {

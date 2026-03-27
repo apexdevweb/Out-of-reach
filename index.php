@@ -36,8 +36,50 @@ require_once __DIR__ . '/app/config/DataScript.php';
     require "app/views/partials/_footer.php";
     ?>
   </footer>
-  <script src="<?= DataScript::FLAG_MENU ?>"></script>
-  <script src="<?= DataScript::MOUSE_DATA ?>"></script>
+  <script defer src="<?= DataScript::FLAG_MENU ?>"></script>
+  <script defer src="<?= DataScript::MOUSE_DATA ?>"></script>
+  <script defer src="<?= DataScript::CHART_CDN ?>"></script>
+  <script type="text/javascript">
+    const ctx = document.getElementById("myChart").getContext("2d");
+    const gradient = ctx.createLinearGradient(0, 0, ctx.canvas.width, 0);
+    gradient.addColorStop(0, "#0099f7");
+    gradient.addColorStop(1, "#f11712");
+    new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: [
+          "Janvier",
+          "Fevrier",
+          "Mars",
+          "Avril",
+          "Mais",
+          "Juin",
+          "juillet",
+          "Aout",
+          "Septembre",
+          "Octobre",
+          "Novembre",
+          "Decembre",
+        ],
+        datasets: [{
+          label: "Nombre de visites",
+          data: <?php echo json_encode(array_values($monthlyCounts)); ?>,
+          backgroundColor: "#fff",
+          borderColor: gradient,
+          borderWidth: 2,
+          fill: false,
+        }, ],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  </script>
 </body>
 
 </html>

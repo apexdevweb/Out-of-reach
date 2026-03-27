@@ -20,4 +20,5 @@ class DataText
   public const SIGNATURE = "Powered by ScriptEnjoyer";
   public const SECTOR_DEFENCE = "Defensive-Security";
   public const SECTOR_ATTACK = "Offensive-Security";
+  public const EMPTY_USER = "No users at the moment";
 }

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
-body, body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .profil__card .profil__sub--container, body header .profil__card .profil__btn--container, body header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo {
+body, body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .profil__card .profil__sub--container, body header .profil__card .profil__btn--container, body header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container {
   margin: 0;
   padding: 0;
 }
 
-body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container {
+body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container, body .administration__container .administration__wrapper {
   height: auto;
   width: 100%;
 }
@@ -16,6 +16,13 @@ body header, body header .globale__nav--container, body header .globale__nav--co
   place-content: center space-evenly;
 }
 
+body .administration__container .administration__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: center;
+  place-content: flex-start space-evenly;
+}
+
 body .shield__container .shield__hero--wrapper .shield__hero--content {
   display: flex;
   flex-flow: row nowrap;
@@ -23,7 +30,7 @@ body .shield__container .shield__hero--wrapper .shield__hero--content {
   place-content: center space-evenly;
 }
 
-body header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container .sector__choice {
+body header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container .sector__choice, body .administration__container, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .search__result--container {
   display: flex;
   flex-flow: column nowrap;
   place-items: center;
@@ -44,6 +51,12 @@ body header .profil__card, body .shield__container .shield__hero--wrapper, body 
     opacity: 0;
   }
 }
+.chart__container {
+  height: auto;
+  width: auto;
+  background-color: #444;
+}
+
 html {
   overflow-x: hidden;
 }
@@ -387,6 +400,46 @@ body .home__container .sector__container .sector__choice .sector__choice--title 
   font-weight: 400;
   letter-spacing: 2px;
   font-family: "Oswald", sans-serif;
+}
+body .administration__container {
+  margin-top: 16vh;
+  height: 100vh;
+  width: 100%;
+  background-color: #444;
+  z-index: 99;
+}
+body .administration__container .administration__wrapper .administration__sub--container {
+  min-height: 50vh;
+  width: 25%;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+body .administration__container .administration__wrapper .administration__sub--container .administration__sub--title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+body .administration__container .administration__wrapper .administration__sub--container .user__key__el {
+  font-family: "Google Sans Code", monospace;
+  color: chartreuse;
+}
+body .administration__container .administration__wrapper .administration__sub--container .search__result--container {
+  min-height: 20vh;
+  width: 80%;
+  background-color: #444;
+  overflow-y: scroll;
+  border-radius: 10px;
+  padding: 5px;
+}
+body .administration__container .administration__wrapper .administration__sub--container .search__result--container .user__list--text {
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  letter-spacing: 2px;
 }
 
 /*# sourceMappingURL=main.css.map */
