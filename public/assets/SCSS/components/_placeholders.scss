@@ -12,6 +12,12 @@
   place-items: center;
   place-content: center space-evenly;
 }
+%flex-row-around {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: center;
+  place-content: center space-between;
+}
 %flex-row-start {
   display: flex;
   flex-flow: row nowrap;
@@ -35,4 +41,9 @@
   flex-flow: column nowrap;
   place-items: flex-start;
   place-content: center space-evenly;
+}
+%gradient-primary {
+  background: #00fff0;
+  background: -webkit-linear-gradient(to right, #0083fe, #00fff0);
+  background: linear-gradient(to right, #0083fe, #00fff0);
 }

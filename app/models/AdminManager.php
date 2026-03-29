@@ -31,15 +31,35 @@ class AdminManager
   public function getUserForAdmin(): array
   {
     try {
-      $req_get_users = "SELECT * FROM ofr_users";
+      $search = "%" . $_POST['users_search'] . "%";
+      $req_get_users = "SELECT * FROM ofr_users WHERE usr_name LIKE ?";
       $req_action_get_users = $this->bdd->prepare($req_get_users);
-      $req_action_get_users->execute();
-
-      $get_all_users =  $req_action_get_users->fetchAll(PDO::FETCH_ASSOC);
-      return $get_all_users = [];
-
+      $req_action_get_users->execute([$search]);
+      return $get_all_users = $req_action_get_users->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
       echo "ERROR GET USERS" . $e->getMessage();
+    }
+  }
+  public function getAllVisits(): array
+  {
+    try {
+      $req_get_visit = "SELECT * FROM ofr_visits";
+      $req_visit_get = $this->bdd->prepare($req_get_visit);
+      $req_visit_get->execute();
+      return $getAllVisit = $req_visit_get->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+      echo "ERROR GET IP AND DATE" . $e->getMessage();
+    }
+  }
+  public function cleanVisitOnDb()
+  {
+    try {
+      $req_clean_visit = "TRUNCATE TABLE ofr_visits";
+      $req_clean_action = $this->bdd->prepare($req_clean_visit);
+      $req_clean_action->execute();
+    } catch (PDOException $e) {
+      echo "ERROR CLEAN VISIT" . $e->getMessage();
+      return false;
     }
   }
 };

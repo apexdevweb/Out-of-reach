@@ -42,10 +42,14 @@ if (file_exists($controllerFile)) {
   $app = new $controllerName();
   //structure conditionelle pour switché entre les pages
   if ($page === 'guard') {
+    if (session_status() === PHP_SESSION_ACTIVE) {
+      session_unset();
+    };
+    $app->insertionVisits();
+    $app->guardPage();
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['try_access'])) {
       $app->accessControll();
     }
-    $app->guardPage();
   } elseif ($page === 'home') {
     $app->homePage();
   } elseif ($page === 'administration') {

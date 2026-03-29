@@ -10,3 +10,10 @@
     }
   }
 }
+@mixin gradient-border($radius: 10px) {
+  border: 1px solid transparent;
+  border-radius: $radius;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(90deg, #00fff0, #0083fe) border-box;
+}

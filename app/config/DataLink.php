@@ -1,5 +1,6 @@
 <?php
 class DataLink {
+  public const CHART_CDN = "https://cdn.jsdelivr.net/npm/chart.js";
   public const BG_VID = "../public/assets/videos/darksky.mp4";
   public const GUARDPAGE_LOGO = "../../../public/assets/images/dogsWhite.png";
   public const GUARDPAGE_GIFA = "public/assets/videos/hackOne.gif";

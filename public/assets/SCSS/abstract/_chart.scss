@@ -1,5 +1,102 @@
+@use "../components/variables";
+@use "../components/placeholders";
+@use "../components/mixins";
 .chart__container {
-  height: auto;
-  width: auto;
-  background-color: #444;
+  @extend %flex-row-center;
+  position: relative;
+  height: 25vh;
+  width: 100%;
+  z-index: 99;
+  & .chart__visitor--container {
+    @extend %flex-column-center;
+    height: 25vh;
+    width: 25%;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 3px;
+    & .infos__visitor--container {
+      @extend %globale-size, %flex-row-center;
+      & .visitor__title {
+        color: #fff;
+        font-size: 1.2rem;
+        font-family: variables.$font-beta;
+        letter-spacing: 2px;
+        font-weight: 400;
+        position: relative;
+      }
+      & .clear__btn {
+        @include mixins.gradient-border();
+        font-size: 0.8rem;
+        font-family: variables.$font-beta;
+        background-color: #000;
+        color: #fff;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    & .infos__visitor {
+      @extend %globale-size, %flex-row-start, %reset-marg-pad;
+      z-index: 99;
+      & .infos__visitor--detail {
+        list-style-type: none;
+        color: #fff;
+        width: 100%;
+        font-size: 0.6rem;
+        font-family: variables.$font-beta;
+        border: 1px solid #444;
+      }
+    }
+    & .chart__ip--container {
+      @extend %flex-column-center;
+      height: auto;
+      width: 100%;
+      background-color: #000;
+      border-radius: 10px;
+      overflow-y: scroll;
+      & .visitor__el {
+        @extend %gradient-primary, %globale-size, %flex-row-around;
+        color: transparent;
+        background-clip: text;
+        list-style-type: none;
+        & .visitor__sub--el {
+          font-family: variables.$font-beta;
+          font-size: 0.8rem;
+          line-height: 35px;
+          text-align: center;
+          word-spacing: 5px;
+        }
+      }
+      & .ban__btn > a {
+        margin: 10px;
+        text-decoration: none;
+        color: #000;
+        background-color: red;
+        border-radius: 5px;
+        font-size: 0.6rem;
+        padding: 5px;
+        font-family: variables.$font-beta;
+        &:hover {
+          box-shadow: 0px 0px 5px 3px red;
+        }
+      }
+    }
+  }
+  & .chart__sub--container {
+    height: 25vh;
+    width: 70%;
+    overflow: hidden;
+    & #myChart {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      background: #000 url("../images/eyesOFR.png") no-repeat 99% 5%;
+      background-size: 9%;
+      border: 1px solid #fff;
+      border-radius: 10px;
+    }
+  }
 }

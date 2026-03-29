@@ -66,8 +66,6 @@ body {
       border-radius: 10px;
       padding: 3px;
       margin: auto;
-      background: url("../images/eyesOFR.png") no-repeat 100% 90%;
-      background-size: 20%;
       & .profil__sub--container {
         @extend %reset-marg-pad, %flex-row-center;
         height: auto;
@@ -407,20 +405,52 @@ body {
           font-weight: 400;
         }
         & .user__key__el {
+          @extend %gradient-primary;
           font-family: variables.$font-ceta;
-          color: chartreuse;
+          color: transparent;
+          background-clip: text;
+        }
+        & .generate__btn {
+          @include mixins.gradient-border();
+          font-size: 0.8rem;
+          font-family: variables.$font-beta;
+          background-color: #000;
+          color: #fff;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        & .search__space {
+          @include mixins.gradient-border();
+          height: 4vh;
+          width: auto;
+          color: #fff;
+          font-size: 0.8rem;
+          font-family: variables.$font-beta;
+        }
+        & .search__btn {
+          margin: 5px;
+          @include mixins.gradient-border();
+          font-size: 0.8rem;
+          font-family: variables.$font-beta;
+          background-color: #000;
+          color: #fff;
+          &:hover {
+            cursor: pointer;
+          }
         }
         & .search__result--container {
           @extend %flex-column-center;
+          @include mixins.gradient-border();
           min-height: 20vh;
           width: 80%;
-          background-color: #444;
           overflow-y: scroll;
-          border-radius: 10px;
           padding: 5px;
           & .user__list--text {
-            color: #fff;
-            font-size: 0.9rem;
+            @extend %gradient-primary;
+            color: transparent;
+            background-clip: text;
+            font-size: 1rem;
             font-family: variables.$font-beta;
             letter-spacing: 2px;
           }

@@ -14,37 +14,28 @@ class ShieldManager
   public function AdminAccess(string $user_ip)
   {
     try {
-     $reqAdminAccess = $this->bdd->prepare("CALL AdminAccessByIp(?)");
-     $reqAdminAccess->execute([$user_ip]);
+      $reqAdminAccess = $this->bdd->prepare("CALL AdminAccessByIp(?)");
+      $reqAdminAccess->execute([$user_ip]);
 
-     $adminAccessResult = $reqAdminAccess->fetch(PDO::FETCH_ASSOC); 
-     $reqAdminAccess->closeCursor();
+      $adminAccessResult = $reqAdminAccess->fetch(PDO::FETCH_ASSOC);
+      $reqAdminAccess->closeCursor();
 
-     return $adminAccessResult;
-
+      return $adminAccessResult;
     } catch (PDOException $e) {
       echo "ERROR ADMIN ACCESS" . $e->getMessage();
       return false;
     }
   }
-  
-  public function insertVisits(string $ip_visit): void
+
+  public function insertVisits(string $ip_visit): bool
   {
-    if (!empty($ip_visit)) {
-      try {
-          $insert_ip = $this->bdd->prepare("INSERT INTO visits (adresse_visit, date_visit) VALUES (?,?)");
-          $insert_ip->execute([$ip_visit, $date_visit]);
-      } catch (PDOException $e) {
-          echo "Erreur d'insertion de l'adresse ip" . $e->getMessage();
-      }
+    try {
+      $req_visit = "INSERT INTO ofr_visits (adress_visit, date_visit) VALUES (?, NOW())";
+      $req_insert_visit = $this->bdd->prepare($req_visit);
+      return $req_insert_visit->execute([$ip_visit]);
+    } catch (PDOException $e) {
+      echo "ERROR INSERT IP AND DATE" . $e->getMessage();
+      return false;
+    }
   }
-  }
-  // public function usersAccess(): void
-  // {
-  //   try {
-      
-  //   } catch (PDOException $e) {
-  //     echo "ERROR USERS ACCESS" . $e->getMessage();
-  //   }
-  // }
 }
