@@ -33,7 +33,19 @@ class AdminController
             $adminAccessManager->getUserForAdmin();
           }
         }
+        header("Location: index.php?page=administration");
+        exit;
+      }
+      if (isset($_GET['adress_visit']) && !empty($_GET['adress_visit'])) {
+        $adminAccessManager->addToBlacklist($_GET['adress_visit']);
+        header("Location: index.php?page=administration");
+        exit;
+      }
 
+      $viewBlacklist = $adminAccessManager->getBlacklist();
+
+      if (isset($_GET['unban_ip']) && !empty($_GET['unban_ip'])) {
+        $adminAccessManager->removeToBlacklist($_GET['unban_ip']);
         header("Location: index.php?page=administration");
         exit;
       }

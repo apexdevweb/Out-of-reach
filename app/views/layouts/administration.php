@@ -1,7 +1,7 @@
 <section class="administration__container">
   <div class="administration__wrapper">
     <div class="administration__sub--container">
-      <h3 class="administration__sub--title">Uniq loging key for users</h3>
+      <h3 class="administration__sub--title">Uniq register key for news users</h3>
       <?php
       if (isset($_SESSION['user_access_key'])) {
       ?>
@@ -18,6 +18,7 @@
       </form>
     </div>
     <div class="administration__sub--container">
+      <h3 class="administration__sub--title">Globale users register</h3>
       <form method="post">
         <input type="search" placeholder="seacrh user" name="users_search" required class="search__space">
         <input type="submit" value="Search" name="search_action" class="search__btn">
@@ -39,6 +40,33 @@
       </div>
     </div>
     <div class="administration__sub--container">
+      <h3 class="administration__sub--title">Blacklist</h3>
+      <ul class="infos__banned">
+        <li class="infos__banned--detail">Banned Identifiant</li>
+        <li class="infos__banned--detail">Banned Ip adresse</li>
+        <li class="infos__banned--detail">Banned Date</li>
+        <li class="infos__banned--detail">Banned Time</li>
+      </ul>
+      <ul class="blacklist__container">
+        <?php
+        if (is_array($viewBlacklist) && !empty($viewBlacklist)) {
+          foreach ($viewBlacklist as $bl_view) {
+        ?>
+            <li class="user__banned">
+              <span class="user__banned--el"><?= $bl_view['banned_ip_id'] ?></span>
+              <span class="user__banned--el"><?= htmlspecialchars($bl_view['banned_adresse']) ?></span>
+              <span class="user__banned--el"><?= $bl_view['banned_time'] ?></span>
+              <span class="unban__btn"><a href="index.php?page=administration&unban_ip=<?= $bl_view['banned_ip_id'] ?>">UNBAN</a></span>
+            </li>
+          <?php
+          }
+        } else {
+          ?>
+          <p class="user__banne--text"><?= DataText::BANNED_USER ?></p>
+        <?php
+        }
+        ?>
+      </ul>
     </div>
   </div>
   <div class="chart__container">
@@ -60,7 +88,7 @@
         if (isset($all_visits)) {
           foreach ($all_visits as $visitor) {
         ?>
-            <li class="visitor__el"><span class="visitor__sub--el"><?= $visitor['id_visit'] ?></span><span class="visitor__sub--el"><?= $visitor['adress_visit'] ?></span><span class="visitor__sub--el"><?= $visitor['date_visit'] ?></span> <span class="ban__btn"><a href="">BAN-IP</a></span></li>
+            <li class="visitor__el"><span class="visitor__sub--el"><?= $visitor['id_visit'] ?></span><span class="visitor__sub--el"><?= $visitor['adress_visit'] ?></span><span class="visitor__sub--el"><?= $visitor['date_visit'] ?></span><span class="ban__btn"><a href="index.php?page=administration&ban_ip=<?= $visitor['adress_visit'] ?>">BAN-IP</a></span></li>
         <?php
           }
         }

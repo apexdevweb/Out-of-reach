@@ -1,4 +1,13 @@
 <?php
+require_once __DIR__ . "/../models/AdminManager.php";
+$adminManager = new AdminManager();
+$userIp = $_SERVER['REMOTE_ADDR'];
+if ($adminManager->verifyToBlacklist($userIp)) {
+  http_response_code(403);
+  die("<h1 style='color:red;text-align:center;'>Accès Interdit</h1>
+       <p style='text-align:center;'>Vous êtes bannie.</p>");
+}
+
 const AVAILABLE_ROUTES = [
   'guard' => 'ShieldController',
   'home' => 'HomeController',

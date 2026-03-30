@@ -21,4 +21,5 @@ class DataText
   public const SECTOR_DEFENCE = "Defensive-Security";
   public const SECTOR_ATTACK = "Offensive-Security";
   public const EMPTY_USER = "No users at the moment";
+  public const BANNED_USER = "No banned at the moment";
 }

@@ -385,7 +385,8 @@ body {
     margin-top: 16vh;
     height: 100vh;
     width: 100%;
-    background-color: #444;
+    background: url('../images/wallpapper_A.jpg') no-repeat 50% 50%;
+    background-size: contain;
     z-index: 99;
     & .administration__wrapper {
       @extend %globale-size, %flex-row-start, %reset-marg-pad;
@@ -447,6 +448,60 @@ body {
           overflow-y: scroll;
           padding: 5px;
           & .user__list--text {
+            @extend %gradient-primary;
+            color: transparent;
+            background-clip: text;
+            font-size: 1rem;
+            font-family: variables.$font-beta;
+            letter-spacing: 2px;
+          }
+        }
+        & .infos__banned {
+          @extend %globale-size, %flex-row-start, %reset-marg-pad;
+          z-index: 99;
+          & .infos__banned--detail {
+            list-style-type: none;
+            color: #fff;
+            width: 100%;
+            font-size: 0.6rem;
+            font-family: variables.$font-beta;
+            border: 1px solid #444;
+          }
+        }
+        & .blacklist__container {
+          @extend %flex-column-center;
+          height: auto;
+          width: 100%;
+          background-color: #000;
+          border-radius: 10px;
+          overflow-y: scroll;
+          & .user__banned {
+            @extend %gradient-primary, %globale-size, %flex-row-around;
+            color: transparent;
+            background-clip: text;
+            list-style-type: none;
+            & .user__banned--el {
+              font-family: variables.$font-beta;
+              font-size: 0.8rem;
+              line-height: 35px;
+              text-align: center;
+              word-spacing: 5px;
+            }
+            & .unban__btn > a {
+              @extend %gradient-primary;
+              margin: 10px;
+              text-decoration: none;
+              color: #000;
+              border-radius: 5px;
+              font-size: 0.6rem;
+              padding: 5px;
+              font-family: variables.$font-beta;
+              &:hover {
+                box-shadow: 0px 0px 5px 3px cornflowerblue;
+              }
+            }
+          }
+          & .user__banne--text {
             @extend %gradient-primary;
             color: transparent;
             background-clip: text;
