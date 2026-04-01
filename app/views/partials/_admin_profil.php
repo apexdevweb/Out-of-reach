@@ -5,7 +5,7 @@
   </div>
   <hr class="profil__separate">
   <div class="profil__btn--container">
-    <a href="index.php?page=administration" class="profil__btn">Administration</a>
-    <a href="index.php?page=logout" class="profil__btn">Logout</a>
+    <a href="index.php?page=<?= Encryptor::encrypt('administration') ?>" class="profil__btn">Administration</a>
+    <a href="index.php?page=<?= Encryptor::encrypt('logout') ?>" class="profil__btn">Logout</a>
   </div>
 </div>

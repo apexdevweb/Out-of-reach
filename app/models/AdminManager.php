@@ -35,7 +35,7 @@ class AdminManager
       $req_get_users = "SELECT * FROM ofr_users WHERE usr_name LIKE ?";
       $req_action_get_users = $this->bdd->prepare($req_get_users);
       $req_action_get_users->execute([$search]);
-      return $get_all_users = $req_action_get_users->fetchAll(PDO::FETCH_ASSOC);
+      return $req_action_get_users->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
       echo "ERROR GET USERS" . $e->getMessage();
     }

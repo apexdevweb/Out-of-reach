@@ -1,5 +1,4 @@
 <?php
-
 class LogoutController
 {
   public function logoutPage()
@@ -24,7 +23,8 @@ class LogoutController
     }
 
     session_destroy();
-    header("Location: index.php?page=guard");
+    $logout_Encrypted = Encryptor::encrypt('guard');
+    header("Location: index.php?page=" . $logout_Encrypted);
     exit();
   }
 }

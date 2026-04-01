@@ -22,7 +22,6 @@ class ShieldController
           $input_key = trim($_POST['alpha_key']);
 
           if ($admin_crypted_key->adminKeyVerify($input_key)) {
-
             $shield_management = new ShieldManager();
             $adminData =  $shield_management->AdminAccess($ip_original);
             if ($adminData && is_array($adminData)) {
@@ -34,11 +33,12 @@ class ShieldController
               "admin_name" => $admin->getAdminName(),
               "admin_key" => $admin->getAdminkey(),
             ];
-
-            header("Location: index.php?page=home");
+            $home_admin_encrypted = Encryptor::encrypt('home');
+            header("Location: index.php?page=" . $home_admin_encrypted);
             exit();
           } elseif ($users_random_crypted_key->usersVerify($input_key)) {
-            header("Location: index.php?page=home");
+            $home_members_encrypted = Encryptor::encrypt('home');
+            header("Location: index.php?page=". $home_members_encrypted);
             exit();
           } else {
             $error_key_msg = DataText::ERROR_KEY;

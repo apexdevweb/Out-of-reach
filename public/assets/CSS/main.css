@@ -44,10 +44,16 @@ body header .profil__card, body .shield__container .shield__hero--wrapper, body 
   place-content: center space-evenly;
 }
 
-body .administration__container .administration__wrapper .administration__sub--container .user__key__el, body .administration__container .administration__wrapper .administration__sub--container .search__result--container .user__list--text, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned .unban__btn > a, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banne--text, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
+body .administration__container .administration__wrapper .administration__sub--container .user__key__el, body .administration__container .administration__wrapper .administration__sub--container .search__result--container .user__list--text, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned .unban__btn > a, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banne--text, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
   background: #00fff0;
   background: -webkit-linear-gradient(to right, #0083fe, #00fff0);
   background: linear-gradient(to right, #0083fe, #00fff0);
+}
+
+body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned {
+  background: #EF3B36;
+  background: -webkit-linear-gradient(to right, #FFFFFF, #EF3B36);
+  background: linear-gradient(to right, #FFFFFF, #EF3B36);
 }
 
 @keyframes glitch-anim-flash {
@@ -477,8 +483,8 @@ body .home__container {
   margin-top: 16vh;
   height: 100vh;
   width: 100%;
-  background: #000 url("../images/dogsWhite.png") no-repeat 50% 50%;
-  background-size: 25%;
+  background: url("../images/wallpapper_B.jpg") no-repeat 50% 50%;
+  background-size: cover;
   z-index: 0;
 }
 body .home__container .users__list--container {

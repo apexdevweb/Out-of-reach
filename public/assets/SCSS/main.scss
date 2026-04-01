@@ -354,8 +354,8 @@ body {
     margin-top: 16vh;
     height: 100vh;
     width: 100%;
-    background: #000 url("../images/dogsWhite.png") no-repeat 50% 50%;
-    background-size: 25%;
+    background: url("../images/wallpapper_B.jpg") no-repeat 50% 50%;
+    background-size: cover;
     z-index: 0;
     & .users__list--container {
       min-height: 8vh;
@@ -385,7 +385,7 @@ body {
     margin-top: 16vh;
     height: 100vh;
     width: 100%;
-    background: url('../images/wallpapper_A.jpg') no-repeat 50% 50%;
+    background: url("../images/wallpapper_A.jpg") no-repeat 50% 50%;
     background-size: contain;
     z-index: 99;
     & .administration__wrapper {
@@ -476,7 +476,7 @@ body {
           border-radius: 10px;
           overflow-y: scroll;
           & .user__banned {
-            @extend %gradient-primary, %globale-size, %flex-row-around;
+            @extend %gradient-secondary, %globale-size, %flex-row-around;
             color: transparent;
             background-clip: text;
             list-style-type: none;

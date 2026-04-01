@@ -30,15 +30,17 @@ class AdminController
 
         if (isset($_POST['search_action'])) {
           if (!empty($_POST['users_search'])) {
-            $adminAccessManager->getUserForAdmin();
+            $adminAccessManager->getUserForAdmin($_POST['users_search']);
           }
         }
-        header("Location: index.php?page=administration");
+        $admin_page_encryptor = Encryptor::encrypt('administration');
+        header("Location: index.php?page=" . $admin_page_encryptor);
         exit;
       }
       if (isset($_GET['adress_visit']) && !empty($_GET['adress_visit'])) {
         $adminAccessManager->addToBlacklist($_GET['adress_visit']);
-        header("Location: index.php?page=administration");
+        $admin_page_encryptor = Encryptor::encrypt('administration');
+        header("Location: index.php?page=" . $admin_page_encryptor);
         exit;
       }
 
@@ -46,12 +48,14 @@ class AdminController
 
       if (isset($_GET['unban_ip']) && !empty($_GET['unban_ip'])) {
         $adminAccessManager->removeToBlacklist($_GET['unban_ip']);
-        header("Location: index.php?page=administration");
+        $admin_page_encryptor = Encryptor::encrypt('administration');
+        header("Location: index.php?page=" . $admin_page_encryptor);
         exit;
       }
       require_once __DIR__ . '/../views/layouts/administration.php';
     } else {
-      header("Location: index.php?page=guard");
+      $admin_page_encryptor = Encryptor::encrypt('guard');
+      header("Location: index.php?page=" . $admin_page_encryptor);
       exit;
     }
   }
