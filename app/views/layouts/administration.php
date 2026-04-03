@@ -3,32 +3,45 @@
     <div class="administration__sub--container">
       <h3 class="administration__sub--title">Uniq register key for news users</h3>
       <?php
-      if (isset($_SESSION['user_access_key'])) {
+      if (isset($_SESSION['user_encrypt_access_key'])) {
       ?>
-        <p class="user__key__el"><?= $_SESSION['user_access_key'] ?></p>
+        <div class="key__container">
+          <p class="user__key__el"><?= $_SESSION['user_encrypt_access_key'] ?></p>
+        </div>
+      <?php
+      } elseif (isset($_SESSION['user_decrypt_access_key'])) {
+      ?>
+        <div class="key__container">
+          <p class="user__key__el"><?= $_SESSION['user_decrypt_access_key'] ?></p>
+        </div>
       <?php
       } else {
       ?>
-        <p class="user__key__el">...</p>
+        <div class="key__container">
+          <p class="user__key__el">...</p>
+        </div>
       <?php
       }
       ?>
       <form method="post">
         <input type="submit" value="Generate-new-key" name="generate" class="generate__btn">
+        <?php
+        if (isset($_SESSION['user_encrypt_access_key'])) {
+        ?>
+          <input type="submit" value="Decrypt-new-key" name="decrypt" class="decrypt__btn">
+        <?php
+        }
+        ?>
       </form>
     </div>
     <div class="administration__sub--container">
       <h3 class="administration__sub--title">Globale users register</h3>
-      <form method="post">
-        <input type="search" placeholder="seacrh user" name="users_search" required class="search__space">
-        <input type="submit" value="Search" name="search_action" class="search__btn">
-      </form>
       <div class="search__result--container">
         <?php
-        if (!empty($get_all_users)) {
-          foreach ($get_all_users as $users) {
+        if (!empty($viewAllUsers)) {
+          foreach ($viewAllUsers as $users) {
         ?>
-            <p class="user__list--text"><?= htmlspecialchars($users['user_name']) ?></p>
+            <p class="user__list--text"><span class="user__mark">#</span><?= htmlspecialchars($users['usr_id']) . " " . htmlspecialchars($users['usr_name']) . " " . htmlspecialchars($users['usr_mail']) ?></p>
           <?php
           }
         } else {
@@ -40,7 +53,7 @@
       </div>
     </div>
     <div class="administration__sub--container">
-      <h3 class="administration__sub--title">Blacklist</h3>
+      <h3 class="administration__sub--title">Shield Blacklist</h3>
       <ul class="infos__banned">
         <li class="infos__banned--detail">Banned Identifiant</li>
         <li class="infos__banned--detail">Banned Ip adresse</li>
@@ -56,7 +69,7 @@
               <span class="user__banned--el"><?= $bl_view['banned_ip_id'] ?></span>
               <span class="user__banned--el"><?= htmlspecialchars($bl_view['banned_adresse']) ?></span>
               <span class="user__banned--el"><?= $bl_view['banned_time'] ?></span>
-              <span class="unban__btn"><a href="index.php?page=administration&unban_ip=<?= $bl_view['banned_ip_id'] ?>">UNBAN</a></span>
+              <span class="unban__btn"><a href="index.php?page=<?=Encryptor::encrypt('administration')?>&unban_ip=<?= $bl_view['banned_ip_id'] ?>">UNBAN</a></span>
             </li>
           <?php
           }

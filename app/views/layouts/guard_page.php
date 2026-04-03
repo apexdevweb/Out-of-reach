@@ -13,7 +13,6 @@
         <small class="shield__hero--sectorInfo"><?= DataText::GUARDPAGE_INFO_SECTOR ?></small>
         <h2 class="shield__hero--slogan"><?= DataText::GUARDPAGE_SLOGAN ?><span class="shield__hero--signature"><small><?= DataText::SIGNATURE ?></small></span></h2>
       </div>
-      <img src="<?= DataLink::GUARDPAGE_LOGO ?>" alt="logo" class="shield__hero--logo">
       <fieldset class="shield__form">
         <?php
         if (isset($error_key_msg)) {

@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
-body, body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .profil__card .profil__sub--container, body header .profil__card .profil__btn--container, body header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+body, body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container .users__list--container .user__card--container, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
   margin: 0;
   padding: 0;
 }
 
-body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .infos__visitor--container, .chart__container .chart__visitor--container .infos__visitor, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
+body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .infos__visitor--container, .chart__container .chart__visitor--container .infos__visitor, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
   height: auto;
   width: 100%;
 }
 
-body header, body header .globale__nav--container, body header .globale__nav--container .nave__sub--container, body header .profil__card .profil__sub--container, body header .profil__card .profil__btn--container, body header .small__subtitle--container, body header .small__subtitle--container .subtitle__el .flag__container.addview, body .home__container .sector__container, .chart__container, .chart__container .chart__visitor--container .infos__visitor--container {
+body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .main__header .small__subtitle--container .subtitle__el .flag__container.addview, body .home__container .users__list--container, body .home__container .users__list--container .user__card--container, .chart__container, .chart__container .chart__visitor--container .infos__visitor--container {
   display: flex;
   flex-flow: row nowrap;
   place-items: center;
@@ -37,14 +37,14 @@ body .shield__container .shield__hero--wrapper .shield__hero--content {
   place-content: center space-evenly;
 }
 
-body header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container .sector__choice, body .administration__container, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .search__result--container, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container, .chart__container .chart__visitor--container, .chart__container .chart__visitor--container .chart__ip--container {
+body .main__header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tips__container .tips__sub--container .tips__el, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .administration__container, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .search__result--container, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container, .chart__container .chart__visitor--container, .chart__container .chart__visitor--container .chart__ip--container {
   display: flex;
   flex-flow: column nowrap;
   place-items: center;
   place-content: center space-evenly;
 }
 
-body .administration__container .administration__wrapper .administration__sub--container .user__key__el, body .administration__container .administration__wrapper .administration__sub--container .search__result--container .user__list--text, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned .unban__btn > a, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banne--text, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
+body .administration__container .administration__wrapper .administration__sub--container .key__container .user__key__el, body .administration__container .administration__wrapper .administration__sub--container .search__result--container .user__list--text, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned .unban__btn > a, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banne--text, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
   background: #00fff0;
   background: -webkit-linear-gradient(to right, #0083fe, #00fff0);
   background: linear-gradient(to right, #0083fe, #00fff0);
@@ -177,15 +177,15 @@ body .shield__vid {
   margin-top: 0;
   z-index: 0;
 }
-body header {
+body .main__header {
   height: auto;
   width: 100%;
   position: absolute;
   top: 0;
   border: 1px solid #444;
 }
-body header .primary__title {
-  margin-left: 0;
+body .main__header .primary__title {
+  margin: 0;
   color: #fff;
   font-family: "Oswald", sans-serif;
   font-size: 3.5rem;
@@ -194,21 +194,23 @@ body header .primary__title {
   position: relative;
   line-height: 70px;
 }
-body header .globale__nav--container {
-  height: auto;
+body .main__header .globale__nav--container {
+  height: 15vh;
   width: 70%;
   overflow: hidden;
+  background: url("../images/dogsWhite.png") no-repeat 0% 50%;
+  background-size: 17%;
 }
-body header .globale__nav--container .nave__sub--container {
+body .main__header .globale__nav--container .nave__sub--container {
   height: auto;
   width: 100%;
 }
-body header .globale__nav--container .nave__sub--container .nav__el {
+body .main__header .globale__nav--container .nave__sub--container .nav__el {
   height: auto;
   width: auto;
   list-style-type: none;
 }
-body header .globale__nav--container .nave__sub--container .nav__el a {
+body .main__header .globale__nav--container .nave__sub--container .nav__el a {
   font-family: "Zalando Sans Expanded", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -216,7 +218,7 @@ body header .globale__nav--container .nave__sub--container .nav__el a {
   text-decoration: none;
   letter-spacing: 2px;
 }
-body header .profil__card {
+body .main__header .profil__card {
   height: auto;
   width: auto;
   border: 1px solid #fff;
@@ -224,12 +226,12 @@ body header .profil__card {
   padding: 3px;
   margin: auto;
 }
-body header .profil__card .profil__sub--container {
+body .main__header .profil__card .profil__sub--container {
   height: auto;
   width: auto;
   overflow: hidden;
 }
-body header .profil__card .profil__sub--container .profil__stickers {
+body .main__header .profil__card .profil__sub--container .profil__stickers {
   height: auto;
   width: auto;
   background-color: greenyellow;
@@ -243,7 +245,7 @@ body header .profil__card .profil__sub--container .profil__stickers {
   padding: 3px;
   letter-spacing: 2px;
 }
-body header .profil__card .profil__sub--container .profil__name {
+body .main__header .profil__card .profil__sub--container .profil__name {
   color: #fff;
   font-family: "Zalando Sans Expanded", sans-serif;
   font-size: 1.2rem;
@@ -251,7 +253,7 @@ body header .profil__card .profil__sub--container .profil__name {
   letter-spacing: 1px;
   text-shadow: 0px 0px 3px #000;
 }
-body header .profil__card .profil__separate {
+body .main__header .profil__card .profil__separate {
   margin: 0;
   height: 2px;
   width: 50%;
@@ -260,7 +262,7 @@ body header .profil__card .profil__separate {
   border-radius: 10px;
   box-shadow: 0px 0px 3px #000;
 }
-body header .profil__card .profil__btn--container .profil__btn {
+body .main__header .profil__card .profil__btn--container .profil__btn {
   margin: 8px;
   color: #fff;
   font-family: "Zalando Sans Expanded", sans-serif;
@@ -270,14 +272,14 @@ body header .profil__card .profil__btn--container .profil__btn {
   letter-spacing: 1px;
   text-shadow: 0px 0px 3px #000;
 }
-body header .profil__card .profil__btn--container .profil__btn:hover {
+body .main__header .profil__card .profil__btn--container .profil__btn:hover {
   text-decoration: underline;
 }
-body header .small__subtitle--container {
+body .main__header .small__subtitle--container {
   height: auto;
   width: 80%;
 }
-body header .small__subtitle--container .subtitle__el {
+body .main__header .small__subtitle--container .subtitle__el {
   padding: 3px;
   height: auto;
   width: 25%;
@@ -291,42 +293,42 @@ body header .small__subtitle--container .subtitle__el {
   text-align: center;
   z-index: 99;
 }
-body header .small__subtitle--container .subtitle__el .flag__arrow {
+body .main__header .small__subtitle--container .subtitle__el .flag__arrow {
   font-size: 2rem;
   color: #fff;
   z-index: 99;
 }
-body header .small__subtitle--container .subtitle__el .flag__arrow:hover {
+body .main__header .small__subtitle--container .subtitle__el .flag__arrow:hover {
   cursor: pointer;
   color: #899;
   text-shadow: 0px 0px 5px #fff;
 }
-body header .small__subtitle--container .subtitle__el .flag__container {
+body .main__header .small__subtitle--container .subtitle__el .flag__container {
   display: none;
 }
-body header .small__subtitle--container .subtitle__el .flag__container .flag {
+body .main__header .small__subtitle--container .subtitle__el .flag__container .flag {
   height: 30px;
   width: auto;
   filter: contrast(100%);
 }
-body header .small__subtitle--container .subtitle__el .flag__container .flag:hover {
+body .main__header .small__subtitle--container .subtitle__el .flag__container .flag:hover {
   cursor: pointer;
   filter: drop-shadow(0px 0px 5px #fff);
 }
-body header .small__subtitle--container .subtitle__el .flag__container.addview {
+body .main__header .small__subtitle--container .subtitle__el .flag__container.addview {
   position: absolute;
   flex-shrink: 0;
   height: auto;
   width: 8vw;
 }
-body header .small__subtitle--container .subtitle__el .logo__data {
+body .main__header .small__subtitle--container .subtitle__el .logo__data {
   margin: 0;
   position: relative;
   height: 6vh;
   width: auto;
 }
-body header .small__subtitle--container .subtitle__el #mouse_data {
-  top: 28%;
+body .main__header .small__subtitle--container .subtitle__el #mouse_data {
+  top: 10%;
   left: 86%;
   position: absolute;
   width: 6ch;
@@ -492,18 +494,93 @@ body .home__container .users__list--container {
   width: 100%;
   border: 1px solid #444;
 }
-body .home__container .sector__container .sector__choice {
-  min-height: 25vh;
-  width: 25%;
+body .home__container .users__list--container .user__card--container {
+  height: 3vh;
+  width: 6vw;
   border: 1px solid #fff;
   border-radius: 10px;
+  flex-shrink: 0;
 }
-body .home__container .sector__container .sector__choice .sector__choice--title {
+body .home__container .users__list--container .user__card--container .user__light {
+  height: 1vh;
+  width: 0.5vw;
+  border-radius: 50%;
+  background-color: greenyellow;
+  box-shadow: 0px 0px 5px 3px greenyellow;
+}
+body .home__container .users__list--container .user__card--container .users__el {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 2px;
   font-family: "Oswald", sans-serif;
+  list-style-type: none;
+}
+body .home__container .sector__container {
+  overflow: hidden;
+}
+body .home__container .sector__container .sector__choice {
+  min-height: 22vh;
+  width: 100%;
+  backdrop-filter: blur(3px);
+}
+body .home__container .sector__container .sector__choice .sector__choice--title {
+  margin: 0;
+  color: #fff;
+  font-size: 5.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-family: "Bitcount Prop Single", system-ui;
+  text-shadow: 0px 0px 5px 3px #000;
+}
+body .tips__container {
+  margin-top: 16vh;
+  height: 100vh;
+  width: 100%;
+  background: url("../images/wallpapper_C.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  z-index: 0;
+}
+body .tips__container .tips__sub--container .tips__el--link {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-family: "Bitcount Prop Single", system-ui;
+  text-shadow: 0px 0px 4px #000;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, font-weight 0.4s ease-in-out;
+}
+body .tips__container .tips__sub--container .tips__el--link:hover {
+  font-weight: 500;
+  color: #000;
+  text-shadow: 0px 0px 4px #fff;
+}
+body .tips__container .tips__sub--container .tips__el {
+  margin: 0;
+  height: 0;
+  width: 100%;
+  border: none;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+body .tips__container .tips__sub--container .tips__el .tips__el--head {
+  border: 1px solid #444;
+}
+body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container {
+  text-align: left;
+}
+body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container .tips__title {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+body .tips__container .tips__sub--container .tips__el.viewTipsEl {
+  height: 25vh;
+  padding: 5px;
+  border: 1px solid #444;
 }
 body .administration__container {
   margin-top: 16vh;
@@ -528,10 +605,22 @@ body .administration__container .administration__wrapper .administration__sub--c
   letter-spacing: 2px;
   font-weight: 400;
 }
-body .administration__container .administration__wrapper .administration__sub--container .user__key__el {
+body .administration__container .administration__wrapper .administration__sub--container .key__container {
+  border: 1px solid #444;
+}
+body .administration__container .administration__wrapper .administration__sub--container .key__container .user__key__el {
+  text-align: center;
   font-family: "Google Sans Code", monospace;
   color: transparent;
   background-clip: text;
+  width: 45ch;
+}
+body .administration__container .administration__wrapper .administration__sub--container .key__container .user__key--separate {
+  height: 2px;
+  width: 50%;
+  border: none;
+  background-color: #444;
+  border-radius: 10px;
 }
 body .administration__container .administration__wrapper .administration__sub--container .generate__btn {
   border: 1px solid transparent;
@@ -545,18 +634,7 @@ body .administration__container .administration__wrapper .administration__sub--c
 body .administration__container .administration__wrapper .administration__sub--container .generate__btn:hover {
   cursor: pointer;
 }
-body .administration__container .administration__wrapper .administration__sub--container .search__space {
-  border: 1px solid transparent;
-  border-radius: 10px;
-  background: linear-gradient(#000, #000) padding-box, linear-gradient(90deg, #00fff0, #0083fe) border-box;
-  height: 4vh;
-  width: auto;
-  color: #fff;
-  font-size: 0.8rem;
-  font-family: "Zalando Sans Expanded", sans-serif;
-}
-body .administration__container .administration__wrapper .administration__sub--container .search__btn {
-  margin: 5px;
+body .administration__container .administration__wrapper .administration__sub--container .decrypt__btn {
   border: 1px solid transparent;
   border-radius: 10px;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(90deg, #00fff0, #0083fe) border-box;
@@ -565,7 +643,7 @@ body .administration__container .administration__wrapper .administration__sub--c
   background-color: #000;
   color: #fff;
 }
-body .administration__container .administration__wrapper .administration__sub--container .search__btn:hover {
+body .administration__container .administration__wrapper .administration__sub--container .decrypt__btn:hover {
   cursor: pointer;
 }
 body .administration__container .administration__wrapper .administration__sub--container .search__result--container {
@@ -580,9 +658,13 @@ body .administration__container .administration__wrapper .administration__sub--c
 body .administration__container .administration__wrapper .administration__sub--container .search__result--container .user__list--text {
   color: transparent;
   background-clip: text;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: "Zalando Sans Expanded", sans-serif;
   letter-spacing: 2px;
+}
+body .administration__container .administration__wrapper .administration__sub--container .search__result--container .user__list--text .user__mark {
+  color: #fff;
+  font-size: 1.1rem;
 }
 body .administration__container .administration__wrapper .administration__sub--container .infos__banned {
   z-index: 99;

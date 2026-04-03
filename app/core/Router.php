@@ -2,15 +2,15 @@
 require_once __DIR__ . "/../models/AdminManager.php";
 require_once __DIR__ . "/Encryptor.php";
 
-$adminManager = new AdminManager();
-$userIp = $_SERVER['REMOTE_ADDR'];
-
+$adminManager = new AdminManager();//On instancie le manager
+$userIp = $_SERVER['REMOTE_ADDR'];// On récupère l'ip du visiteur
+// On vérifie que l'ip du visiteur figure dans la blacklist ou non
 if ($adminManager->verifyToBlacklist($userIp)) {
   http_response_code(403);
   die("<h1 style='color:red;text-align:center;'>Accès Interdit</h1>
        <p style='text-align:center;'>Vous êtes bannie.</p>");
 }
-
+// On initialise la navigation autorisé
 const AVAILABLE_ROUTES = [
   'guard' => 'ShieldController',
   'home' => 'HomeController',
@@ -21,11 +21,12 @@ const AVAILABLE_ROUTES = [
   'logout' => 'LogoutController',
 ];
 
-//on récupère la page
+//on récupère la page de guard (l'index)→le shield
 $page = 'guard';
 if (isset($_GET['page'])) {
+  //si la page est vérifié on chiffre l'url
   $decrypted = Encryptor::decrypt($_GET['page']);
-
+  //si la clé de tableau est éxistante on déchiffre
   if ($decrypted && array_key_exists($decrypted, AVAILABLE_ROUTES)) {
     $page = $decrypted;
   } else {

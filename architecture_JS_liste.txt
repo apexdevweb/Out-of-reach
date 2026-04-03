@@ -1,0 +1,200 @@
+🧱 1. Architecture Monolithique (JS fullstack)
+➤ Principe
+
+Une seule application contenant :
+
+frontend
+backend
+logique métier
+➤ Exemple
+Next.js en mode fullstack
+➤ Avantages
+Simple à développer
+Déploiement unique
+➤ Inconvénients
+Difficile à scaler
+🧩 2. Architecture SPA (Single Page Application)
+➤ Principe
+
+Une seule page web dynamique chargée une fois
+
+➤ Frameworks
+React
+Vue.js
+Angular
+➤ Fonctionnement
+Backend = API
+Frontend = JS qui gère tout
+➤ Avantages
+Ultra fluide
+UX moderne
+➤ Inconvénients
+SEO plus compliqué (sans SSR)
+🌐 3. Architecture SSR (Server-Side Rendering)
+➤ Principe
+
+Le serveur génère le HTML
+
+➤ Frameworks
+Next.js
+Nuxt.js
+➤ Avantages
+SEO optimal
+Chargement rapide
+➤ Inconvénients
+Plus complexe
+⚡ 4. Architecture SSG (Static Site Generation)
+➤ Principe
+
+Pages générées à la compilation
+
+➤ Outils
+Next.js
+Gatsby
+➤ Avantages
+Ultra rapide
+Sécurisé
+➤ Inconvénients
+Moins dynamique
+🔌 5. Architecture API (Backend JS)
+➤ Principe
+
+JS utilisé côté serveur pour exposer des APIs
+
+➤ Technologies
+Node.js
+Express
+➤ Types
+REST
+GraphQL
+➤ Avantages
+Flexible
+Séparation front/back
+🔗 6. Architecture Fullstack JS (isomorphique)
+➤ Principe
+
+Même langage partout (JS)
+
+➤ Stack typique
+Front : React
+Back : Node.js
+➤ Avantages
+Productivité
+Partage de code
+⚙️ 7. Architecture Microservices (JS)
+➤ Principe
+
+Chaque service = app Node indépendante
+
+➤ Exemple
+Service auth
+Service paiement
+Service utilisateurs
+➤ Avantages
+Scalabilité
+Déploiement indépendant
+➤ Inconvénients
+Complexité élevée
+🧠 8. Architecture Event-Driven
+➤ Principe
+
+Communication par événements
+
+➤ Outils
+Kafka
+RabbitMQ
+EventEmitter (Node)
+➤ Avantages
+Asynchrone
+Découplé
+🧱 9. Architecture MVC (JS backend)
+➤ Principe
+Model
+View
+Controller
+➤ Utilisation
+Express + structure MVC
+🧰 10. Architecture en couches (Layered)
+➤ Principe
+Route → Controller → Service → Repository → DB
+➤ Avantages
+Code structuré
+Testable
+🧬 11. Architecture Modulaire
+➤ Principe
+
+Découpage en modules indépendants
+
+➤ Exemple
+Modules ES (import/export)
+🧠 12. Architecture Clean Architecture
+➤ Principe
+
+Séparer :
+
+logique métier
+infrastructure
+➤ Utilisation JS
+souvent avec Node.js
+🔷 13. Architecture Hexagonale
+➤ Principe
+
+Core indépendant des frameworks
+
+➤ Avantages
+Très maintenable
+🧾 14. Architecture JAMstack
+➤ Principe
+JS (frontend)
+API
+Markup statique
+➤ Outils
+Next.js
+Netlify
+➤ Avantages
+Rapide
+Sécurisé
+📡 15. Architecture GraphQL
+➤ Principe
+
+Une API flexible pour récupérer les données
+
+➤ Outils
+Apollo Server
+Node.js
+🧮 16. Architecture CQRS
+➤ Principe
+
+Séparer lecture et écriture
+
+🔐 17. Architecture Serverless (JS)
+➤ Principe
+
+Fonctions exécutées à la demande
+
+➤ Plateformes
+AWS Lambda
+Vercel
+➤ Avantages
+Scalabilité auto
+🧩 18. Micro-frontend
+➤ Principe
+
+Frontend découpé en plusieurs apps
+
+➤ Exemple
+Une app React par feature
+➤ Avantages
+Déploiement indépendant
+🧠 Architecture MVVM (Model-View-ViewModel)
+➤ Principe
+
+MVVM est une évolution de MVC adaptée aux interfaces modernes.
+
+Elle sépare :
+
+Model → données (API, state)
+View → interface utilisateur (HTML)
+ViewModel → logique entre les deux
+
+👉 Le ViewModel fait le lien automatiquement (binding).
