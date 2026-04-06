@@ -203,7 +203,7 @@ body {
         text-align: left;
         & .shield__effect--A {
           position: absolute;
-          top: 149px;
+          top: 70px;
           left: 0;
           height: 60vh;
           width: auto;
@@ -454,8 +454,31 @@ body {
             }
           }
         }
+        & .tips__content {
+          font-family: variables.$font-beta;
+          color: #fff;
+          font-size: 1.2rem;
+          letter-spacing: 2px;
+        }
+        & .tips__img--container {
+          @extend %globale-size, %reset-marg-pad, %flex-row-around;
+            & .tips__picture {
+              @extend %reset-marg-pad, %flex-row-center;
+              height: auto;
+              width: 25%;
+            }
+            & .structure__list--container {
+              @extend %reset-marg-pad, %flex-column-start;
+              & .structure__list--el {
+                @extend %flex-row-stretch;
+                height: auto;
+                width: auto;
+                list-style-type: none;
+              }
+            }  
+        }
         &.viewTipsEl {
-          height: 25vh;
+          height: 50vh;
           padding: 5px;
           border: 1px solid #444;
         }

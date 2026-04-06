@@ -30,12 +30,12 @@ if (isset($_GET['page'])) {
   if ($decrypted && array_key_exists($decrypted, AVAILABLE_ROUTES)) {
     $page = $decrypted;
   } else {
-    // Si le token est invalide ou modifié (HMAC invalide)
+    // Si le token est invalide ou tentative de modification la signature HMAC sera déclaré corrompue
     http_response_code(403);
     die("Erreur de sécurité : URL corrompue.");
   }
 }
-//si jamais la page n'existe pas dans une des clée du tableau indexé on redirige sur 'home' automatiquement
+//si jamais la page n'existe pas dans une des clée du tableau indexé on redirige sur le shield automatiquement
 if (!array_key_exists($page, AVAILABLE_ROUTES)) {
   $page = 'guard';
 }

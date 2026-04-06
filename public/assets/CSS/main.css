@@ -1,22 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
-body, body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container .users__list--container .user__card--container, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
+body, body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container .users__list--container .user__card--container, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__picture, body .tips__container .tips__sub--container .tips__el .tips__img--container .structure__list--container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
   margin: 0;
   padding: 0;
 }
 
-body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .infos__visitor--container, .chart__container .chart__visitor--container .infos__visitor, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
+body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .infos__visitor--container, .chart__container .chart__visitor--container .infos__visitor, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
   height: auto;
   width: 100%;
 }
 
-body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .main__header .small__subtitle--container .subtitle__el .flag__container.addview, body .home__container .users__list--container, body .home__container .users__list--container .user__card--container, .chart__container, .chart__container .chart__visitor--container .infos__visitor--container {
+body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .main__header .small__subtitle--container .subtitle__el .flag__container.addview, body .home__container .users__list--container, body .home__container .users__list--container .user__card--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__picture, .chart__container, .chart__container .chart__visitor--container .infos__visitor--container {
   display: flex;
   flex-flow: row nowrap;
   place-items: center;
   place-content: center space-evenly;
 }
 
-body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
+body .tips__container .tips__sub--container .tips__el .tips__img--container, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
   display: flex;
   flex-flow: row nowrap;
   place-items: center;
@@ -37,10 +37,24 @@ body .shield__container .shield__hero--wrapper .shield__hero--content {
   place-content: center space-evenly;
 }
 
+body .tips__container .tips__sub--container .tips__el .tips__img--container .structure__list--container .structure__list--el {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: center;
+  place-content: flex-start stretch;
+}
+
 body .main__header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tips__container .tips__sub--container .tips__el, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .administration__container, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .search__result--container, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container, .chart__container .chart__visitor--container, .chart__container .chart__visitor--container .chart__ip--container {
   display: flex;
   flex-flow: column nowrap;
   place-items: center;
+  place-content: center space-evenly;
+}
+
+body .tips__container .tips__sub--container .tips__el .tips__img--container .structure__list--container {
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: flex-start;
   place-content: center space-evenly;
 }
 
@@ -353,7 +367,7 @@ body .shield__container .shield__hero--wrapper .hero__img--container {
 }
 body .shield__container .shield__hero--wrapper .hero__img--container .shield__effect--A {
   position: absolute;
-  top: 149px;
+  top: 70px;
   left: 0;
   height: 60vh;
   width: auto;
@@ -577,8 +591,23 @@ body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el-
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
+body .tips__container .tips__sub--container .tips__el .tips__content {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__picture {
+  height: auto;
+  width: 25%;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .structure__list--container .structure__list--el {
+  height: auto;
+  width: auto;
+  list-style-type: none;
+}
 body .tips__container .tips__sub--container .tips__el.viewTipsEl {
-  height: 25vh;
+  height: 50vh;
   padding: 5px;
   border: 1px solid #444;
 }

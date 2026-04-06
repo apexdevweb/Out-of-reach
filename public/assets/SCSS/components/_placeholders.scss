@@ -30,6 +30,12 @@
   place-items: flex-end;
   place-content: center space-evenly;
 }
+%flex-row-stretch {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: center;
+  place-content: flex-start stretch;
+}
 %flex-column-center {
   display: flex;
   flex-flow: column nowrap;

@@ -25,6 +25,8 @@ class DataText
   public const BANNED_USER = "No banned at the moment";
   //↓↓↓constantes des articles de la section tips↓↓↓
   public const WEB_ENGINEERING_TITLE = "Technical structures by programing language";
+  public const WEB_ENGINEERING_SUB_TITLE = "#Javascript #Php #Python #Rust";
+  public const ARCHITECTUR_DESCRIPTION = "Here you can find information on the setup and operation of the different architectures.";
   public const JS_TITLE_ARTICLE = "JAVASCRIPT-ARCHITECTURES";
   public const PHP_TITLE_ARTICLE = "PHP-ARCHITECTURES";
   public const PY_TITLE_ARTICLE = "PYTHON-ARCHITECTURES";

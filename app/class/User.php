@@ -1,4 +1,4 @@
-<?php
+*/<?php
 
 class User
 {
@@ -17,5 +17,17 @@ class User
   public function getUserId(): int
   {
     return $this->user_id;
+  }
+  public function getUserMain(): string
+  {
+    return $this->user_mail;
+  }
+  public function getUserName(): string
+  {
+    return $this->user_name;
+  }
+  public function getUserKey(): string
+  {
+    return $this->user_secure_key;
   }
 }
