@@ -1,0 +1,19 @@
+1. AES-GCM (Galois/Counter Mode) — Le standard actuel
+C'est un mode de chiffrement authentifié (AEAD).
+Confidentialité + Intégrité : En plus de cacher le texte, il génère un "Tag d'authentification" (une signature numérique).
+Protection contre la falsification : Si un attaquant modifie ne serait-ce qu'un seul bit de la donnée chiffrée dans votre base MySQL, le déchiffrement PHP échouera immédiatement. Vous savez que la donnée est restée saine.
+Performance : Il est très rapide car il peut traiter les blocs de données en parallèle (idéal pour les processeurs modernes).
+Complexité : Un peu plus complexe à coder manuellement (il faut gérer le "Tag"), mais c'est ce qui est utilisé par HTTPS/TLS aujourd'hui.
+2. AES-CBC (Cipher Block Chaining) — L'ancien standard
+C'est un mode plus ancien qui ne gère que la confidentialité.
+Confidentialité uniquement : Il cache le texte, mais il ne peut pas prouver que le texte n'a pas été modifié.
+Vulnérabilité (Padding Oracle) : Si mal implémenté, il est vulnérable à des attaques complexes qui permettent à un hacker de deviner le contenu en observant les erreurs renvoyées par le serveur.
+Dépendance des blocs : Chaque bloc dépend du précédent. On ne peut pas paralléliser le chiffrement, ce qui le rend théoriquement plus lent que le GCM.
+Nécessite un HMAC : Pour sécuriser du CBC, vous devriez calculer manuellement une signature (HMAC) par-dessus. GCM fait tout cela automatiquement en une seule étape.
+Résumé comparatif
+Caractéristique	AES-CBC	AES-GCM
+Confidentialité	Oui	Oui
+Authenticité (Tag)	Non (doit être ajouté à la main)	Oui (Intégré)
+Vitesse	Standard	Très rapide
+Sécurité	Bonne (si couplé à un HMAC)	Excellente (natif)
+Usage recommandé	Applications héritées (Legacy)	Nouveaux projets / Sécurité haute

@@ -4,7 +4,7 @@ require_once __DIR__ . "/Encryptor.php";
 
 $adminManager = new AdminManager();//On instancie le manager
 $userIp = $_SERVER['REMOTE_ADDR'];// On récupère l'ip du visiteur
-// On vérifie que l'ip du visiteur figure dans la blacklist ou non
+// On vérifie si l'ip du visiteur figure dans la blacklist, si oui on bloque l'accés
 if ($adminManager->verifyToBlacklist($userIp)) {
   http_response_code(403);
   die("<h1 style='color:red;text-align:center;'>Accès Interdit</h1>
@@ -21,7 +21,7 @@ const AVAILABLE_ROUTES = [
   'logout' => 'LogoutController',
 ];
 
-//on récupère la page de guard (l'index)→le shield
+//on récupère la page de guard (l'index) → le shield
 $page = 'guard';
 if (isset($_GET['page'])) {
   //si la page est vérifié on chiffre l'url
@@ -63,7 +63,7 @@ if (file_exists($controllerFile)) {
   //si le fichier existe on l'importe
   require_once $controllerFile;
 
-  //on instancie et on appel la method
+  //on instancie et on appel la methode
   $app = new $controllerName();
   //structure conditionelle pour switché entre les pages
   if ($page === 'guard') {

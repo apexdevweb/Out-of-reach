@@ -90,7 +90,7 @@ class AdminManager
       $req_bl_getting->execute();
       return $req_bl_getting->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
-      echo "BANNING VERIFY ERROR" . $e->getMessage();
+      echo "BAN GETTING ERROR" . $e->getMessage();
       return[];
     }
   }

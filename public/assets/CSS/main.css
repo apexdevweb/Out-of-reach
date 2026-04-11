@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
-body, body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container .users__list--container .user__card--container, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__picture, body .tips__container .tips__sub--container .tips__el .tips__img--container .structure__list--container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
+body, body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tools__container .threat__wrapper, body .tools__container .threat__wrapper .threat__container .threat__el, body .tools__container .tools__wrapper, body .tools__container .tools__wrapper .tools__el, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .tips__container .tips__sub--container .tips__el .tips__el--foot, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
   margin: 0;
   padding: 0;
 }
 
-body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .infos__visitor--container, .chart__container .chart__visitor--container .infos__visitor, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
+body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container, body .tools__container .tools__wrapper, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .tips__container .tips__sub--container .tips__el .tips__el--foot, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .infos__visitor--container, .chart__container .chart__visitor--container .infos__visitor, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
   height: auto;
   width: 100%;
 }
 
-body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .main__header .small__subtitle--container .subtitle__el .flag__container.addview, body .home__container .users__list--container, body .home__container .users__list--container .user__card--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__picture, .chart__container, .chart__container .chart__visitor--container .infos__visitor--container {
+body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .main__header .small__subtitle--container .subtitle__el .flag__container.addview, body .home__container .users__list--container, body .home__container .users__list--container .user__card--container, body .tools__container .threat__wrapper .threat__container .threat__el, .chart__container, .chart__container .chart__visitor--container .infos__visitor--container {
   display: flex;
   flex-flow: row nowrap;
   place-items: center;
@@ -23,10 +23,17 @@ body .tips__container .tips__sub--container .tips__el .tips__img--container, bod
   place-content: center space-between;
 }
 
-body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
+body .tools__container .threat__wrapper {
   display: flex;
   flex-flow: row nowrap;
-  place-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+body .tools__container .threat__wrapper .threat__container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
+  display: flex;
+  flex-flow: row nowrap;
+  place-items: center start;
   place-content: flex-start space-evenly;
 }
 
@@ -37,24 +44,10 @@ body .shield__container .shield__hero--wrapper .shield__hero--content {
   place-content: center space-evenly;
 }
 
-body .tips__container .tips__sub--container .tips__el .tips__img--container .structure__list--container .structure__list--el {
-  display: flex;
-  flex-flow: row nowrap;
-  place-items: center;
-  place-content: flex-start stretch;
-}
-
-body .main__header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tips__container .tips__sub--container .tips__el, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .administration__container, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .search__result--container, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container, .chart__container .chart__visitor--container, .chart__container .chart__visitor--container .chart__ip--container {
+body .main__header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tools__container .tools__wrapper, body .tools__container .tools__wrapper .tools__el, body .tips__container .tips__sub--container .tips__el, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .administration__container, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .search__result--container, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container, .chart__container .chart__visitor--container, .chart__container .chart__visitor--container .chart__ip--container {
   display: flex;
   flex-flow: column nowrap;
   place-items: center;
-  place-content: center space-evenly;
-}
-
-body .tips__container .tips__sub--container .tips__el .tips__img--container .structure__list--container {
-  display: flex;
-  flex-flow: column nowrap;
-  place-items: flex-start;
   place-content: center space-evenly;
 }
 
@@ -351,10 +344,19 @@ body .shield__container {
   overflow: hidden;
 }
 body .shield__container .shield__hero--wrapper {
-  height: 99vh;
+  height: 100vh;
   width: 100%;
   top: 0;
   position: absolute;
+  overflow: hidden;
+}
+body .shield__container .shield__hero--wrapper .hero__effect--bg {
+  height: auto;
+  width: 100%;
+  opacity: 0.3;
+  mix-blend-mode: screen;
+  z-index: 0;
+  filter: contrast(140%), grayscale(50%);
 }
 body .shield__container .shield__hero--wrapper .hero__img--container {
   display: block;
@@ -379,8 +381,8 @@ body .shield__container .shield__hero--wrapper .hero__img--container .shield__ef
 }
 body .shield__container .shield__hero--wrapper .hero__img--container .shield__effect--C {
   position: absolute;
-  top: 50px;
-  left: 20vw;
+  top: 250px;
+  left: 28vw;
   height: 70vh;
   width: auto;
   mix-blend-mode: screen;
@@ -432,7 +434,7 @@ body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub
   text-shadow: 0px 0px 3px #000;
 }
 body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--slogan {
-  margin: auto;
+  margin: 0 0 0 -150px;
   color: #fff;
   font-family: "Oswald", sans-serif;
   font-size: 7.5rem;
@@ -510,23 +512,25 @@ body .home__container .users__list--container {
 }
 body .home__container .users__list--container .user__card--container {
   height: 3vh;
-  width: 6vw;
+  width: auto;
   border: 1px solid #fff;
   border-radius: 10px;
   flex-shrink: 0;
+  padding: 8px;
 }
 body .home__container .users__list--container .user__card--container .user__light {
-  height: 1vh;
-  width: 0.5vw;
+  margin: 8px;
+  height: 0.4vh;
+  width: 0.4vw;
   border-radius: 50%;
   background-color: greenyellow;
   box-shadow: 0px 0px 5px 3px greenyellow;
 }
 body .home__container .users__list--container .user__card--container .users__el {
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-family: "Oswald", sans-serif;
   list-style-type: none;
 }
@@ -547,11 +551,91 @@ body .home__container .sector__container .sector__choice .sector__choice--title 
   font-family: "Bitcount Prop Single", system-ui;
   text-shadow: 0px 0px 5px 3px #000;
 }
+body .tools__container {
+  margin-top: 16vh;
+  height: 100vh;
+  width: 100%;
+  background: url("../images/wallpapper_B.jpg") no-repeat 50% 50% fixed;
+  background-size: cover;
+  z-index: 0;
+}
+body .tools__container .threat__wrapper {
+  height: 15vh;
+  width: 100%;
+}
+body .tools__container .threat__wrapper .threat__container {
+  margin-top: 0;
+  padding: 5px;
+  height: auto;
+  width: 50%;
+  border: 1px solid #444;
+}
+body .tools__container .threat__wrapper .threat__container .threat__el {
+  height: 8vh;
+  width: 17%;
+  list-style-type: none;
+  font-family: "Oswald", sans-serif;
+  background-color: #000;
+  border-radius: 10px;
+}
+body .tools__container .threat__wrapper .threat__container .threat__el:nth-child(1) {
+  color: #fff;
+}
+body .tools__container .threat__wrapper .threat__container .threat__el:nth-child(2) {
+  color: rgb(255, 255, 155);
+}
+body .tools__container .threat__wrapper .threat__container .threat__el:nth-child(2) .threat__logo {
+  background-color: rgb(255, 255, 155);
+  box-shadow: 0px 0px 5px 1px rgb(255, 255, 155);
+}
+body .tools__container .threat__wrapper .threat__container .threat__el:nth-child(3) {
+  color: rgb(255, 183, 48);
+}
+body .tools__container .threat__wrapper .threat__container .threat__el:nth-child(3) .threat__logo {
+  background-color: rgb(255, 183, 48);
+  box-shadow: 0px 0px 5px 1px rgb(255, 183, 48);
+}
+body .tools__container .threat__wrapper .threat__container .threat__el:nth-child(4) {
+  color: rgb(255, 55, 0);
+}
+body .tools__container .threat__wrapper .threat__container .threat__el:nth-child(4) .threat__logo {
+  background-color: rgb(255, 55, 0);
+  box-shadow: 0px 0px 5px 1px rgb(255, 55, 0);
+}
+body .tools__container .threat__wrapper .threat__container .threat__el .threat__info {
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+body .tools__container .threat__wrapper .threat__container .threat__el .threat__logo {
+  height: 4vh;
+  width: auto;
+  border-radius: 10px;
+  padding: 5px;
+}
+body .tools__container .threat__wrapper .tools__intro--txt {
+  margin: 0;
+  padding: 8px 8px 8px 8px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 4rem;
+  font-family: "Oswald", sans-serif;
+  border: 1px solid #444;
+  width: 11ch;
+  font-weight: 500;
+  line-height: 60px;
+  text-align: right;
+}
+body .tools__container .tools__wrapper .tools__el {
+  height: 35vh;
+  width: 25%;
+  background-color: #000;
+  border-radius: 10px;
+}
 body .tips__container {
   margin-top: 16vh;
   height: 100vh;
   width: 100%;
-  background: url("../images/wallpapper_C.jpg") no-repeat 50% 50%;
+  background: url("../images/wallpapper_B.jpg") no-repeat 50% 50% fixed;
   background-size: cover;
   z-index: 0;
 }
@@ -597,19 +681,72 @@ body .tips__container .tips__sub--container .tips__el .tips__content {
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
-body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__picture {
-  height: auto;
-  width: 25%;
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container {
+  overflow: hidden;
+  transition: box-shadow 0.5s ease-out;
 }
-body .tips__container .tips__sub--container .tips__el .tips__img--container .structure__list--container .structure__list--el {
-  height: auto;
-  width: auto;
-  list-style-type: none;
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container:nth-child(1) {
+  background: url("../images/articleIMG/jsPapper.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container:nth-child(2) {
+  background: url("../images/articleIMG/phpPapper.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container:nth-child(3) {
+  background: url("../images/articleIMG/pythonPapper.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container:nth-child(4) {
+  background: url("../images/articleIMG/rustPapper.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container .tips__link--title {
+  font-size: 8rem;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  mix-blend-mode: overlay;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container .tips__link {
+  font-size: 3.5rem;
+  color: #fff;
+  font-family: "Google Sans Code", monospace;
+  font-weight: 400;
+  transition: transform 0.5s ease, color 0.3s ease-in-out;
+  transform-origin: bottom;
+  opacity: 0;
+  text-decoration: none;
+  line-height: 0;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container:hover {
+  z-index: 99;
+  box-shadow: 0px 0px 5px #fff;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container:hover .tips__link--title {
+  opacity: 1;
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container:hover .tips__link {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container:hover .tips__link:hover {
+  color: #000;
+  text-shadow: 0px 0px 5px #fff;
 }
 body .tips__container .tips__sub--container .tips__el.viewTipsEl {
   height: 50vh;
   padding: 5px;
   border: 1px solid #444;
+}
+body .tips__container .tips__sub--container .tips__el .tips__el--foot .tips__foot--txt {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
 }
 body .administration__container {
   margin-top: 16vh;

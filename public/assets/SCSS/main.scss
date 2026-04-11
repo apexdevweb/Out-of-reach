@@ -4,19 +4,23 @@
 @use "components/mixins";
 @use "abstract/keyframes";
 @use "abstract/chart";
+
 html {
   overflow-x: hidden;
 }
+
 body {
   @extend %reset-marg-pad;
   box-sizing: border-box;
   background-color: #000;
+
   & .shield__vid {
     height: auto;
     width: 100%;
     margin-top: 0;
     z-index: 0;
   }
+
   & .main__header {
     @extend %reset-marg-pad, %flex-row-center;
     height: auto;
@@ -24,6 +28,7 @@ body {
     position: absolute;
     top: 0;
     border: 1px solid #444;
+
     & .primary__title {
       margin: 0;
       color: #fff;
@@ -34,6 +39,7 @@ body {
       position: relative;
       line-height: 70px;
     }
+
     & .globale__nav--container {
       @extend %reset-marg-pad, %flex-row-center;
       height: 15vh;
@@ -41,14 +47,17 @@ body {
       overflow: hidden;
       background: url("../images/dogsWhite.png") no-repeat 0% 50%;
       background-size: 17%;
+
       & .nave__sub--container {
         @extend %reset-marg-pad, %flex-row-center;
         height: auto;
         width: 100%;
+
         & .nav__el {
           height: auto;
           width: auto;
           list-style-type: none;
+
           & a {
             font-family: variables.$font-beta;
             font-size: 1rem;
@@ -60,6 +69,7 @@ body {
         }
       }
     }
+
     & .profil__card {
       @extend %flex-column-center;
       height: auto;
@@ -68,11 +78,13 @@ body {
       border-radius: 10px;
       padding: 3px;
       margin: auto;
+
       & .profil__sub--container {
         @extend %reset-marg-pad, %flex-row-center;
         height: auto;
         width: auto;
         overflow: hidden;
+
         & .profil__stickers {
           height: auto;
           width: auto;
@@ -87,6 +99,7 @@ body {
           padding: 3px;
           letter-spacing: 2px;
         }
+
         & .profil__name {
           color: #fff;
           font-family: variables.$font-beta;
@@ -96,6 +109,7 @@ body {
           text-shadow: 0px 0px 3px #000;
         }
       }
+
       & .profil__separate {
         margin: 0;
         height: 2px;
@@ -105,8 +119,10 @@ body {
         border-radius: 10px;
         box-shadow: 0px 0px 3px #000;
       }
+
       & .profil__btn--container {
         @extend %reset-marg-pad, %flex-row-center;
+
         & .profil__btn {
           margin: 8px;
           color: #fff;
@@ -116,6 +132,7 @@ body {
           text-decoration: none;
           letter-spacing: 1px;
           text-shadow: 0px 0px 3px #000;
+
           &:hover {
             text-decoration: underline;
           }
@@ -127,6 +144,7 @@ body {
       @extend %reset-marg-pad, %flex-row-center;
       height: auto;
       width: 80%;
+
       & .subtitle__el {
         padding: 3px;
         height: auto;
@@ -140,27 +158,33 @@ body {
         text-shadow: 0px 0px 3px #000;
         text-align: center;
         z-index: 99;
+
         & .flag__arrow {
           font-size: 2rem;
           color: #fff;
           z-index: 99;
+
           &:hover {
             cursor: pointer;
             color: #899;
             text-shadow: 0px 0px 5px #fff;
           }
         }
+
         & .flag__container {
           display: none;
+
           & .flag {
             height: 30px;
             width: auto;
             filter: contrast(100%);
+
             &:hover {
               cursor: pointer;
               filter: drop-shadow(0px 0px 5px #fff);
             }
           }
+
           &.addview {
             position: absolute;
             @extend %flex-row-center;
@@ -169,12 +193,14 @@ body {
             width: 8vw;
           }
         }
+
         & .logo__data {
           margin: 0;
           position: relative;
           height: 6vh;
           width: auto;
         }
+
         & #mouse_data {
           top: 10%;
           left: 86%;
@@ -184,15 +210,26 @@ body {
       }
     }
   }
+
   & .shield__container {
     @extend %reset-marg-pad, %globale-size;
     overflow: hidden;
+
     & .shield__hero--wrapper {
       @extend %reset-marg-pad, %flex-column-center;
-      height: 99vh;
+      height: 100vh;
       width: 100%;
       top: 0;
       position: absolute;
+      overflow: hidden;
+      & .hero__effect--bg {
+        height: auto;
+        width: 100%;
+        opacity: 0.3;
+        mix-blend-mode: screen;
+        z-index: 0;
+        filter: contrast(140%), grayscale(50%);
+      }
       & .hero__img--container {
         display: block;
         height: 80vh;
@@ -217,10 +254,11 @@ body {
           mask-image: radial-gradient(circle, black 15%, transparent 65%);
           z-index: 0;
         }
+
         & .shield__effect--C {
           position: absolute;
-          top: 50px;
-          left: 20vw;
+          top: 250px;
+          left: 28vw;
           height: 70vh;
           width: auto;
           mix-blend-mode: screen;
@@ -234,6 +272,7 @@ body {
           z-index: 0;
           animation: glitch-anim-flash 6s infinite linear;
         }
+
         & .shield__effect--B {
           position: absolute;
           top: 80px;
@@ -251,6 +290,7 @@ body {
           animation: glitch-anim-flash 6s infinite linear 1.5s;
         }
       }
+
       & .shield__hero--content {
         @extend %flex-row-end, %globale-size;
         padding: 0;
@@ -259,6 +299,7 @@ body {
         z-index: 99;
         position: absolute;
         bottom: 0;
+
         & .shield__hero--logo {
           margin: 0;
           padding: 0;
@@ -266,12 +307,14 @@ body {
           width: auto;
           filter: drop-shadow(0px 0px 5px #000);
         }
+
         & .hero__sub--content {
           @extend %flex-column-center;
           padding: 0;
           margin: 0 0 0 0;
           height: auto;
           width: 55%;
+
           & .shield__hero--sectorInfo {
             @extend %reset-marg-pad;
             color: #899;
@@ -281,8 +324,9 @@ body {
             letter-spacing: 2px;
             text-shadow: 0px 0px 3px #000;
           }
+
           & .shield__hero--slogan {
-            margin: auto;
+            margin: 0 0 0 -150px;
             color: #fff;
             font-family: variables.$font-alpha;
             font-size: 7.5rem;
@@ -290,6 +334,7 @@ body {
             width: 17ch;
             line-height: 110px;
             text-align: left;
+
             & .shield__hero--signature {
               font-family: variables.$font-beta;
               font-size: 1rem;
@@ -305,6 +350,7 @@ body {
           width: 25%;
           overflow: hidden;
           border: none;
+
           & legend {
             color: #899;
             font-family: variables.$font-ceta;
@@ -314,10 +360,12 @@ body {
             letter-spacing: 2px;
             text-shadow: 0px 0px 3px #000;
           }
+
           & form {
             @extend %flex-column-center;
             height: 25vh;
             width: 100%;
+
             & input[type="text"] {
               height: 4.5vh;
               width: auto;
@@ -330,6 +378,7 @@ body {
               letter-spacing: 2px;
               text-shadow: 0px 0px 3px #000;
             }
+
             & input[type="submit"] {
               height: 4vh;
               width: 6vw;
@@ -341,6 +390,7 @@ body {
               font-family: variables.$font-alpha;
               letter-spacing: 2px;
               transition: background-color 0.3s ease-in-out;
+
               &:hover {
                 color: #fff;
                 background-color: #000;
@@ -352,6 +402,7 @@ body {
       }
     }
   }
+
   & .home__container {
     margin-top: 16vh;
     height: 100vh;
@@ -359,43 +410,52 @@ body {
     background: url("../images/wallpapper_B.jpg") no-repeat 50% 50%;
     background-size: cover;
     z-index: 0;
+
     & .users__list--container {
       @extend %flex-row-center;
       min-height: 8vh;
       width: 100%;
       border: 1px solid #444;
+
       & .user__card--container {
-        @extend %flex-row-center, %reset-marg-pad;
+        @extend %flex-row-center;
         height: 3vh;
-        width: 6vw;
+        width: auto;
         border: 1px solid #fff;
         border-radius: 10px;
         flex-shrink: 0;
+        padding: 8px;
+
         & .user__light {
-          height: 1vh;
-          width: 0.5vw;
+          margin: 8px;
+          height: 0.4vh;
+          width: 0.4vw;
           border-radius: 50%;
           background-color: greenyellow;
           box-shadow: 0px 0px 5px 3px greenyellow;
         }
+
         & .users__el {
           color: #fff;
-          font-size: 0.8rem;
+          font-size: 1rem;
           font-weight: 400;
-          letter-spacing: 2px;
+          letter-spacing: 3px;
           font-family: variables.$font-alpha;
           list-style-type: none;
         }
       }
     }
+
     & .sector__container {
       @extend %globale-size, %flex-column-center, %reset-marg-pad;
       overflow: hidden;
+
       & .sector__choice {
         @extend %flex-column-center, %reset-marg-pad;
         min-height: 22vh;
         width: 100%;
         backdrop-filter: blur(3px);
+
         & .sector__choice--title {
           margin: 0;
           color: #fff;
@@ -408,13 +468,105 @@ body {
       }
     }
   }
+
+  & .tools__container {
+    margin-top: 16vh;
+    height: 100vh;
+    width: 100%;
+    background: url("../images/wallpapper_B.jpg") no-repeat 50% 50% fixed;
+    background-size: cover;
+    z-index: 0;
+    & .threat__wrapper {
+      @extend %reset-marg-pad, %flex-row-between;
+      height: 15vh;
+      width: 100%;
+      & .threat__container {
+        @extend %flex-row-start;
+        margin-top: 0;
+        padding: 5px;
+        height: auto;
+        width: 50%;
+        border: 1px solid #444;
+        & .threat__el {
+          @extend %reset-marg-pad, %flex-row-center;
+          height: 8vh;
+          width: 17%;
+          list-style-type: none;
+          font-family: variables.$font-alpha;
+          background-color: #000;
+          border-radius: 10px;
+          @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+              @if $i ==1 {
+                color: #fff;
+              } @else if $i ==2 {
+                color: rgb(255, 255, 155);
+                & .threat__logo {
+                  background-color: rgb(255, 255, 155);
+                  box-shadow: 0px 0px 5px 1px rgb(255, 255, 155);
+                }
+              } @else if $i ==3 {
+                color: rgb(255, 183, 48);
+                & .threat__logo {
+                  background-color: rgb(255, 183, 48);
+                  box-shadow: 0px 0px 5px 1px rgb(255, 183, 48);
+                }
+              } @else if $i ==4 {
+                color: rgb(255, 55, 0);
+                & .threat__logo {
+                  background-color: rgb(255, 55, 0);
+                  box-shadow: 0px 0px 5px 1px rgb(255, 55, 0);
+                }
+              }
+            }
+          }
+          & .threat__info {
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+          }
+          & .threat__logo {
+            height: 4vh;
+            width: auto;
+            border-radius: 10px;
+            padding: 5px;
+          }
+        }
+      }
+      & .tools__intro--txt {
+        margin: 0;
+        padding: 8px 8px 8px 8px;
+        letter-spacing: 1px;
+        color: #fff;
+        font-size: 4rem;
+        font-family: variables.$font-alpha;
+        border: 1px solid #444;
+        width: 11ch;
+        font-weight: 500;
+        line-height: 60px;
+        text-align: right;
+      }
+    }
+    & .tools__wrapper {
+      @extend %reset-marg-pad, %globale-size, %flex-column-center;
+
+      & .tools__el {
+        @extend %reset-marg-pad, %flex-column-center;
+        height: 35vh;
+        width: 25%;
+        background-color: #000;
+        border-radius: 10px;
+      }
+    }
+  }
+
   & .tips__container {
     margin-top: 16vh;
     height: 100vh;
     width: 100%;
-    background: url("../images/wallpapper_C.jpg") no-repeat 50% 50%;
+    background: url("../images/wallpapper_B.jpg") no-repeat 50% 50% fixed;
     background-size: cover;
     z-index: 0;
+
     & .tips__sub--container {
       & .tips__el--link {
         color: #fff;
@@ -431,6 +583,7 @@ body {
           text-shadow: 0px 0px 4px #fff;
         }
       }
+
       & .tips__el {
         @extend %flex-column-center;
         margin: 0;
@@ -440,12 +593,15 @@ body {
         backdrop-filter: blur(5px);
         overflow: hidden;
         transition: 0.4s ease-in-out;
+
         & .tips__el--head {
           @extend %globale-size, %flex-column-center, %reset-marg-pad;
           border: 1px solid #444;
+
           & .tips__el--title-container {
             @extend %globale-size, %reset-marg-pad;
             text-align: left;
+
             & .tips__title {
               font-family: variables.$font-beta;
               color: #fff;
@@ -462,29 +618,98 @@ body {
         }
         & .tips__img--container {
           @extend %globale-size, %reset-marg-pad, %flex-row-around;
-            & .tips__picture {
-              @extend %reset-marg-pad, %flex-row-center;
-              height: auto;
-              width: 25%;
-            }
-            & .structure__list--container {
-              @extend %reset-marg-pad, %flex-column-start;
-              & .structure__list--el {
-                @extend %flex-row-stretch;
-                height: auto;
-                width: auto;
-                list-style-type: none;
+          & .tips__link--container {
+            @extend %globale-size, %reset-marg-pad, %flex-column-center;
+            overflow: hidden;
+            transition: box-shadow 0.5s ease-out;
+            @for $i from 1 through 4 {
+              &:nth-child(#{$i}) {
+                @if $i ==1 {
+                  background: url("../images/articleIMG/jsPapper.jpg")
+                    no-repeat
+                    50%
+                    50%;
+                  background-size: cover;
+                } @else if $i ==2 {
+                  background: url("../images/articleIMG/phpPapper.jpg")
+                    no-repeat
+                    50%
+                    50%;
+                  background-size: cover;
+                } @else if $i ==3 {
+                  background: url("../images/articleIMG/pythonPapper.jpg")
+                    no-repeat
+                    50%
+                    50%;
+                  background-size: cover;
+                } @else if $i ==4 {
+                  background: url("../images/articleIMG/rustPapper.jpg")
+                    no-repeat
+                    50%
+                    50%;
+                  background-size: cover;
+                }
               }
-            }  
+            }
+            & .tips__link--title {
+              font-size: 8rem;
+              color: #fff;
+              font-family: variables.$font-alpha;
+              font-weight: 400;
+              mix-blend-mode: overlay;
+              opacity: 0;
+              transition: opacity 0.3s ease;
+            }
+            & .tips__link {
+              font-size: 3.5rem;
+              color: #fff;
+              font-family: variables.$font-ceta;
+              font-weight: 400;
+              transition: transform 0.5s ease, color 0.3s ease-in-out;
+              transform-origin: bottom;
+              opacity: 0;
+              text-decoration: none;
+              line-height: 0;
+            }
+            &:hover {
+              z-index: 99;
+              box-shadow: 0px 0px 5px #fff;
+              & .tips__link--title {
+                opacity: 1;
+              }
+              & .tips__link {
+                opacity: 1;
+                transform: translateY(-50px);
+                &:hover {
+                  color: #000;
+                  text-shadow: 0px 0px 5px #fff;
+                }
+              }
+            }
+          }
         }
+
         &.viewTipsEl {
           height: 50vh;
           padding: 5px;
           border: 1px solid #444;
         }
+
+        & .tips__el--foot {
+          @extend %globale-size, %reset-marg-pad;
+
+          & .tips__foot--txt {
+            font-family: variables.$font-beta;
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-align: center;
+          }
+        }
       }
     }
   }
+
   & .administration__container {
     @extend %flex-column-center;
     margin-top: 16vh;
@@ -493,8 +718,10 @@ body {
     background: url("../images/wallpapper_A.jpg") no-repeat 50% 50%;
     background-size: contain;
     z-index: 99;
+
     & .administration__wrapper {
       @extend %globale-size, %flex-row-start, %reset-marg-pad;
+
       & .administration__sub--container {
         @extend %flex-column-center, %reset-marg-pad;
         min-height: 50vh;
@@ -503,6 +730,7 @@ body {
         border: 1px solid #fff;
         border-radius: 10px;
         overflow: hidden;
+
         & .administration__sub--title {
           color: #fff;
           font-size: 1.2rem;
@@ -510,9 +738,11 @@ body {
           letter-spacing: 2px;
           font-weight: 400;
         }
+
         & .key__container {
           @extend %globale-size, %flex-column-center, %reset-marg-pad;
           border: 1px solid #444;
+
           & .user__key__el {
             text-align: center;
             @extend %gradient-primary;
@@ -521,6 +751,7 @@ body {
             background-clip: text;
             width: 45ch;
           }
+
           & .user__key--separate {
             height: 2px;
             width: 50%;
@@ -536,20 +767,24 @@ body {
           font-family: variables.$font-beta;
           background-color: #000;
           color: #fff;
+
           &:hover {
             cursor: pointer;
           }
         }
+
         & .decrypt__btn {
           @include mixins.gradient-border();
           font-size: 0.8rem;
           font-family: variables.$font-beta;
           background-color: #000;
           color: #fff;
+
           &:hover {
             cursor: pointer;
           }
         }
+
         & .search__result--container {
           @extend %flex-column-center;
           @include mixins.gradient-border();
@@ -557,6 +792,7 @@ body {
           width: 80%;
           overflow-y: scroll;
           padding: 5px;
+
           & .user__list--text {
             @extend %gradient-primary;
             color: transparent;
@@ -564,15 +800,18 @@ body {
             font-size: 0.8rem;
             font-family: variables.$font-beta;
             letter-spacing: 2px;
+
             & .user__mark {
               color: #fff;
               font-size: 1.1rem;
             }
           }
         }
+
         & .infos__banned {
           @extend %globale-size, %flex-row-start, %reset-marg-pad;
           z-index: 99;
+
           & .infos__banned--detail {
             list-style-type: none;
             color: #fff;
@@ -582,6 +821,7 @@ body {
             border: 1px solid #444;
           }
         }
+
         & .blacklist__container {
           @extend %flex-column-center;
           height: auto;
@@ -589,11 +829,13 @@ body {
           background-color: #000;
           border-radius: 10px;
           overflow-y: scroll;
+
           & .user__banned {
             @extend %gradient-secondary, %globale-size, %flex-row-around;
             color: transparent;
             background-clip: text;
             list-style-type: none;
+
             & .user__banned--el {
               font-family: variables.$font-beta;
               font-size: 0.8rem;
@@ -601,6 +843,7 @@ body {
               text-align: center;
               word-spacing: 5px;
             }
+
             & .unban__btn > a {
               @extend %gradient-primary;
               margin: 10px;
@@ -610,11 +853,13 @@ body {
               font-size: 0.6rem;
               padding: 5px;
               font-family: variables.$font-beta;
+
               &:hover {
                 box-shadow: 0px 0px 5px 3px cornflowerblue;
               }
             }
           }
+
           & .user__banne--text {
             @extend %gradient-primary;
             color: transparent;

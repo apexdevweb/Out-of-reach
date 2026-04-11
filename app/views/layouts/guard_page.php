@@ -1,8 +1,9 @@
 <video autoplay loop muted playsinline class="shield__vid">
-    <source src="<?= DataLink::BG_VID ?>" type="video/mp4">
+  <source src="<?= DataLink::BG_VID ?>" type="video/mp4">
 </video>
 <section class="shield__container">
   <div class="shield__hero--wrapper">
+    <img src="<?= DataLink::BG_ANONYM ?>" alt="bg" class="hero__effect--bg">
     <div class="hero__img--container">
       <img src="<?= DataLink::GUARDPAGE_GIFA ?>" alt="imgA" class="shield__effect--A">
       <img src="<?= DataLink::GUARDPAGE_GIFB ?>" alt="imgB" class="shield__effect--B">

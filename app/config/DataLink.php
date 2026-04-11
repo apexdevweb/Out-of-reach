@@ -2,6 +2,7 @@
 class DataLink {
   public const CHART_CDN = "https://cdn.jsdelivr.net/npm/chart.js";
   public const BG_VID = "../public/assets/videos/darksky.mp4";
+  public const BG_ANONYM = "public/assets/images/anonymous_papper.jpg";
   public const GUARDPAGE_GIFA = "public/assets/videos/hackOne.gif";
   public const GUARDPAGE_GIFB = "public/assets/videos/hackTwo.gif";
   public const GUARDPAGE_GIFC = "public/assets/videos/hackTree.gif";
@@ -14,4 +15,8 @@ class DataLink {
   public const PHP_LOGO = "public/assets/images/articleIMG/phpLogo.png";
   public const PYTHON_LOGO = "public/assets/images/articleIMG/pythonLogo.png";
   public const RUST_LOGO = "public/assets/images/articleIMG/rustLogo.png";
+  //↓↓↓constantes des articles de la section tools↓↓↓
+  public const MINORIS_PICT = "public/assets/images/minorisIcon.png";
+  public const MAJORIS_PICT = "public/assets/images/majorisIcon.png";
+  public const TERMINUS_PICT = "public/assets/images/terminusIcon.png";
 }
