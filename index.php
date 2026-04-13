@@ -4,6 +4,9 @@ if (session_status() === PHP_SESSION_NONE) {
 };
 require_once __DIR__ . "/app/core/Encryptor.php";
 require __DIR__ . "/app/security/csp.php";
+header("Cache-Control: no-cache, no-store, must-revalidate"); // sécurité maximale. Il interdit formellement au navigateur d'enregistrer la page sur le disque dur (même dans les fichiers temporaires)
+header("Pragma: no-cache"); // Ce header garantit que même sur un vieux système, la page ne sera pas mise en cache.
+header("Expires: 0"); // indique de ne jamais servir cette page à quelqu'un d'autre et de toujours venir la chercher à la source (notre serveur).
 header("Content-Security-Policy:" . $csp); // Autorise uniquement les scripts de notre propre domaine (à configurer pour CDN et API)
 header("X-Frame-Options: DENY"); // Empêche l'affichage de notre site dans une iframe (anti-clickjacking)
 header("X-Content-Type-Options: nosniff"); // Empêche l'interprétation de fichiers MIME non déclarés

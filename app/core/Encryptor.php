@@ -1,32 +1,40 @@
 <?php
 class Encryptor
 {
-  private static $key = "77aa51799d148c13be0a86d3e66b33b7";
-  private static $hmacKey = "b56b80ed367d041edb3e50d18e50035a";
-  private static $cipher = "aes-256-cbc";
+    // LA clé doit faire 32 caractères pour l'AES-256
+    private static $key = "77aa51799d148c13be0a86d3e66b33b7";
+    private static $cipher = "aes-256-gcm";//AES-256 Galois-Counter-Mode
+    public static function encrypt($data)
+    {
+        $ivSize = openssl_cipher_iv_length(self::$cipher);
+        $iv = random_bytes($ivSize); // GCM recommande random_bytes au lieu de pseudo_bytes
+        
+        // Le tag est récupéré par référence
+        $encrypted = openssl_encrypt($data, self::$cipher, self::$key, OPENSSL_RAW_DATA, $iv, $tag);
+        
+        // On stocke IV + TAG + DONNÉES
+        // Le tag GCM fait par défaut 16 octets
+        $payload = $iv . $tag . $encrypted;
+        
+        return str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($payload));
+    }
 
-  public static function encrypt($data)
-  {
-    $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length(self::$cipher));
-    $encrypted = openssl_encrypt($data, self::$cipher, self::$key, OPENSSL_RAW_DATA, $iv);
-    $payload = $iv . $encrypted;
-    $hmac = hash_hmac('sha256', $payload, self::$hmacKey, true);
-    return str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($hmac . $payload));
-  }
+    public static function decrypt($token)
+    {
+        $decoded = base64_decode(str_replace(['-', '_'], ['+', '/'], $token));
+        
+        $ivSize = openssl_cipher_iv_length(self::$cipher);
+        $tagSize = 16; // Taille standard du tag GCM en PHP
+        
+        // Extraction des morceaux
+        $iv = substr($decoded, 0, $ivSize);
+        $tag = substr($decoded, $ivSize, $tagSize);
+        $encrypted = substr($decoded, $ivSize + $tagSize);
 
-  public static function decrypt($token)
-  {
-    $decoded = base64_decode(str_replace(['-', '_'], ['+', '/'], $token));
-    $hmacSize = 32;
-    $payload = substr($decoded, $hmacSize);
-    $receivedHmac = substr($decoded, 0, $hmacSize);
-    $calculatedHmac = hash_hmac('sha256', $payload, self::$hmacKey, true);
+        // Déchiffrement avec vérification automatique du tag
+        $decrypted = openssl_decrypt($encrypted, self::$cipher, self::$key, OPENSSL_RAW_DATA, $iv, $tag);
 
-    if (!hash_equals($receivedHmac, $calculatedHmac)) return false;
-
-    $ivSize = openssl_cipher_iv_length(self::$cipher);
-    $iv = substr($payload, 0, $ivSize);
-    $encrypted = substr($payload, $ivSize);
-    return openssl_decrypt($encrypted, self::$cipher, self::$key, OPENSSL_RAW_DATA, $iv);
-  }
+        // Si le tag est invalide (donnée modifiée), openssl_decrypt renverra false
+        return $decrypted;
+    }
 }

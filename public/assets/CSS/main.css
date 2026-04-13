@@ -497,6 +497,41 @@ body .shield__container .shield__hero--wrapper .shield__hero--content .shield__f
   background-color: #000;
   cursor: pointer;
 }
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container {
+  height: 25vh;
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #899;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .pav_num--container {
+  height: auto;
+  width: 8vw;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .pav_num--container .pin_key {
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  color: #899;
+  font-size: 1.2rem;
+  padding: 3px;
+  font-family: "Oswald", sans-serif;
+  transition: background-color 0.3s ease-in-out;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .pav_num--container .pin_key:hover {
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
 body .home__container {
   margin-top: 16vh;
   height: 100vh;

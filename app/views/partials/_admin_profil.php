@@ -1,3 +1,6 @@
+<?php
+if (isset($_SESSION['auth_admin'])) {
+?>
 <div class="profil__card">
   <div class="profil__sub--container">
     <span class="profil__stickers">Admin</span>
@@ -9,3 +12,6 @@
     <a href="index.php?page=<?= Encryptor::encrypt('logout') ?>" class="profil__btn"><?= DataText::NAV_ADMIN_LOGOUT ?></a>
   </div>
 </div>
+<?php
+}
+?>
