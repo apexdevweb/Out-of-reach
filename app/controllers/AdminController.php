@@ -57,6 +57,8 @@ class AdminController
         header("Location: index.php?page=" . $admin_page_encryptor);
         exit;
       }
+      global $scripts_js;
+      $scripts_js = [DataLink::CHART_CDN, DataScript::CHART_JS];
       require_once __DIR__ . '/../views/layouts/administration.php';
 
     } else {

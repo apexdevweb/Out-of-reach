@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
-body, body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tools__container .threat__wrapper, body .tools__container .threat__wrapper .threat__container .threat__el, body .tools__container .tools__wrapper, body .tools__container .tools__wrapper .tools__el, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .tips__container .tips__sub--container .tips__el .tips__el--foot, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
+body, body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .facial__container, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tools__container .threat__wrapper, body .tools__container .threat__wrapper .threat__container .threat__el, body .tools__container .tools__wrapper .tools__el, body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__icone--container, body .tools__container .tools__wrapper .tools__el .tools__img--container, body .tools__container .tools__wrapper .tools__el .tools__img--container .tools__img--wrapper, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__making--title, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .manufacturing__sub--container, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__foot .tools__link, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .tips__container .tips__sub--container .tips__el .tips__el--foot, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
   margin: 0;
   padding: 0;
 }
 
-body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container, body .tools__container .tools__wrapper, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .tips__container .tips__sub--container .tips__el .tips__el--foot, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .infos__visitor--container, .chart__container .chart__visitor--container .infos__visitor, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
+body .shield__container, body .shield__container .shield__hero--wrapper .shield__hero--content, body .home__container .sector__container, body .tools__container .tools__wrapper, body .tools__container .tools__wrapper .tools__el .tools__el--header, body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__el--title-ctnr, body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__icone--container, body .tools__container .tools__wrapper .tools__el .tools__img--container, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .manufacturing__sub--container, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .tips__container .tips__sub--container .tips__el .tips__el--foot, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container .user__banned, .chart__container .chart__visitor--container .infos__visitor--container, .chart__container .chart__visitor--container .infos__visitor, .chart__container .chart__visitor--container .chart__ip--container .visitor__el {
   height: auto;
   width: 100%;
 }
 
-body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .main__header .small__subtitle--container .subtitle__el .flag__container.addview, body .home__container .users__list--container, body .home__container .users__list--container .user__card--container, body .tools__container .threat__wrapper .threat__container .threat__el, .chart__container, .chart__container .chart__visitor--container .infos__visitor--container {
+body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .main__header .small__subtitle--container .subtitle__el .flag__container.addview, body .home__container .users__list--container, body .home__container .users__list--container .user__card--container, body .tools__container .threat__wrapper .threat__container .threat__el, body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__icone--container, body .tools__container .tools__wrapper .tools__el .tools__img--container, body .tools__container .tools__wrapper .tools__el .tools__img--container .tools__img--wrapper, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .manufacturing__sub--container, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__foot .tools__link, .chart__container, .chart__container .chart__visitor--container .infos__visitor--container {
   display: flex;
   flex-flow: row nowrap;
   place-items: center;
@@ -30,10 +30,17 @@ body .tools__container .threat__wrapper {
   justify-content: space-between;
 }
 
-body .tools__container .threat__wrapper .threat__container, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
+body .tools__container .threat__wrapper .threat__container, body .tools__container .tools__wrapper .tools__el .tools__el--header, body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__el--title-ctnr, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .chart__container .chart__visitor--container .infos__visitor {
   display: flex;
   flex-flow: row nowrap;
   place-items: center start;
+  place-content: flex-start space-evenly;
+}
+
+body .tools__container .tools__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  place-items: center flex-start;
   place-content: flex-start space-evenly;
 }
 
@@ -44,7 +51,7 @@ body .shield__container .shield__hero--wrapper .shield__hero--content {
   place-content: center space-evenly;
 }
 
-body .main__header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tools__container .tools__wrapper, body .tools__container .tools__wrapper .tools__el, body .tips__container .tips__sub--container .tips__el, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .administration__container, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .search__result--container, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container, .chart__container .chart__visitor--container, .chart__container .chart__visitor--container .chart__ip--container {
+body .main__header .profil__card, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .facial__container, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form, body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tools__container .tools__wrapper .tools__el, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools, body .tips__container .tips__sub--container .tips__el, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .administration__container, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .search__result--container, body .administration__container .administration__wrapper .administration__sub--container .blacklist__container, .enroll__container, .enroll__container .enroll__vid--container, .chart__container .chart__visitor--container, .chart__container .chart__visitor--container .chart__ip--container {
   display: flex;
   flex-flow: column nowrap;
   place-items: center;
@@ -168,6 +175,66 @@ body .administration__container .administration__wrapper .administration__sub--c
   background-size: 9%;
   border: 1px solid #fff;
   border-radius: 10px;
+}
+
+.enroll__container {
+  margin-top: 25vh;
+  height: auto;
+  width: 100%;
+  z-index: 99;
+  border: 1px solid #899;
+}
+.enroll__container .enroll__title {
+  color: #fff;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.enroll__container .enroll__status {
+  color: #899;
+  font-family: "Google Sans Code", monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.enroll__container .enroll__vid--container {
+  height: 300px;
+  width: 400px;
+  border: 1px solid #899;
+  overflow: hidden;
+}
+.enroll__container .enroll__vid--container .enroll__vid {
+  height: 100%;
+  width: 100%;
+}
+.enroll__container .enroll__vid--container .enroll__canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.enroll__container .enroll__btn {
+  margin: 5px;
+  height: 4vh;
+  width: auto;
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  color: #899;
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  transition: background-color 0.3s ease-in-out;
+}
+.enroll__container .enroll__btn:hover {
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
 }
 
 html {
@@ -350,6 +417,38 @@ body .shield__container .shield__hero--wrapper {
   position: absolute;
   overflow: hidden;
 }
+body .shield__container .shield__hero--wrapper .facial__container {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  height: 400px;
+  width: 400px;
+  border: 1px solid #899;
+  z-index: 99;
+}
+body .shield__container .shield__hero--wrapper .facial__container .facial__title {
+  margin: 0;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: 50px;
+  letter-spacing: 2px;
+}
+body .shield__container .shield__hero--wrapper .facial__container .guard__video {
+  height: 100%;
+  width: 100%;
+}
+body .shield__container .shield__hero--wrapper .facial__container .guard__vid--canva {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: none;
+}
 body .shield__container .shield__hero--wrapper .hero__effect--bg {
   height: auto;
   width: 100%;
@@ -498,6 +597,8 @@ body .shield__container .shield__hero--wrapper .shield__hero--content .shield__f
   cursor: pointer;
 }
 body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container {
+  margin: 0;
+  padding: 5px;
   height: 25vh;
   width: auto;
   display: flex;
@@ -505,6 +606,54 @@ body .shield__container .shield__hero--wrapper .shield__hero--content .shield__f
   align-items: center;
   justify-content: center;
   border: 1px solid #899;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .face__register--logo {
+  height: 8vh;
+  width: auto;
+  filter: drop-shadow(0px 0px 15px #fff);
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .face__register--infos {
+  color: #899;
+  font-family: "Google Sans Code", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 3px #000;
+  text-align: center;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .face__btn {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 8px;
+  background-color: #000;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+  font-weight: 500;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .face__btn:hover {
+  color: #000;
+  background-color: #fff;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .try__counter {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container input[type=password] {
+  height: 2vh;
+  width: auto;
+  background: transparent;
+  border: 1px solid #899;
+  border-radius: 5px;
+  color: red;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 3px #000;
+  margin: auto;
 }
 body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .pav_num--container {
   height: auto;
@@ -516,13 +665,13 @@ body .shield__container .shield__hero--wrapper .shield__hero--content .shield__f
 }
 body .shield__container .shield__hero--wrapper .shield__hero--content .shield__form form .pin__container .pav_num--container .pin_key {
   margin: 5px;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   background: transparent;
   border-radius: 5px;
   border: 2px solid #fff;
   color: #899;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   padding: 3px;
   font-family: "Oswald", sans-serif;
   transition: background-color 0.3s ease-in-out;
@@ -545,6 +694,20 @@ body .home__container .users__list--container {
   width: 100%;
   border: 1px solid #444;
 }
+body .home__container .users__list--container .users_list--sticker {
+  padding: 8px;
+  height: auto;
+  width: auto;
+  background-color: greenyellow;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px greenyellow;
+  color: #000;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  list-style-type: none;
+}
 body .home__container .users__list--container .user__card--container {
   height: 3vh;
   width: auto;
@@ -555,8 +718,8 @@ body .home__container .users__list--container .user__card--container {
 }
 body .home__container .users__list--container .user__card--container .user__light {
   margin: 8px;
-  height: 0.4vh;
-  width: 0.4vw;
+  height: 0.6vh;
+  width: 0.3vw;
   border-radius: 50%;
   background-color: greenyellow;
   box-shadow: 0px 0px 5px 3px greenyellow;
@@ -649,22 +812,120 @@ body .tools__container .threat__wrapper .threat__container .threat__el .threat__
 }
 body .tools__container .threat__wrapper .tools__intro--txt {
   margin: 0;
-  padding: 8px 8px 8px 8px;
+  padding: 0px 8px 8px 8px;
   letter-spacing: 1px;
-  color: #fff;
-  font-size: 4rem;
+  color: transparent;
+  font-size: 7rem;
   font-family: "Oswald", sans-serif;
-  border: 1px solid #444;
   width: 11ch;
-  font-weight: 500;
-  line-height: 60px;
+  font-weight: 700;
+  line-height: 100px;
   text-align: right;
+  background: url("../images/skullbg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  background-clip: text;
+  filter: drop-shadow(0px 0px 1px #fff);
+}
+body .tools__container .tools__wrapper {
+  margin-top: 80px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid #444;
 }
 body .tools__container .tools__wrapper .tools__el {
-  height: 35vh;
-  width: 25%;
-  background-color: #000;
+  height: 45vh;
+  width: 40%;
+  background: url("../images/skullbg.jpg") no-repeat 50% 50%;
+  background-size: cover;
   border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #444;
+}
+body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__el--title-ctnr .tools__title {
+  margin: 0;
+  font-size: 3.4rem;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 4px;
+  text-shadow: 0px 0px 5px #000;
+}
+body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__icone--container .tools__icone--el {
+  text-align: center;
+  height: auto;
+  width: auto;
+  margin: 0 0 0 0;
+  padding: 2px;
+  list-style-type: none;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0.858);
+  border-radius: 5px;
+}
+body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__icone--container .tools__icone--el .threat__level--tools {
+  height: 5vh;
+  width: auto;
+  background-color: rgb(255, 183, 48);
+  box-shadow: 0px 0px 5px 1px rgb(255, 183, 48);
+  border-radius: 10px;
+}
+body .tools__container .tools__wrapper .tools__el .tools__img--container .tools__img--wrapper {
+  height: auto;
+  width: 100%;
+  padding: 15px;
+}
+body .tools__container .tools__wrapper .tools__el .tools__img--container .tools__img--wrapper .tools__img--el {
+  margin: 0;
+  height: auto;
+  width: 30vw;
+  border-radius: 10px;
+}
+body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.858);
+  border-radius: 10px;
+}
+body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__making--title {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #fff;
+  font-family: "Google Sans Code", monospace;
+  text-align: center;
+}
+body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .manufacturing__sub--container .tools__making--language {
+  height: 5vh;
+  width: auto;
+}
+body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__separate {
+  margin: 10px 0 10px 0;
+  height: 3px;
+  width: 80%;
+  background-color: #444;
+  border-radius: 50px;
+  border: none;
+}
+body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__foot {
+  margin: 0;
+  padding-right: 5px;
+  height: auto;
+  width: 100%;
+}
+body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__foot .tools__link {
+  font-weight: 200;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #fff;
+  font-family: "Bitcount Prop Single", system-ui;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__foot .tools__link:hover {
+  font-weight: 500;
+  color: #000;
+  text-shadow: 0px 0px 4px #fff;
 }
 body .tips__container {
   margin-top: 16vh;
@@ -852,7 +1113,7 @@ body .administration__container .administration__wrapper .administration__sub--c
   border-radius: 10px;
   background: linear-gradient(#000, #000) padding-box, linear-gradient(90deg, #00fff0, #0083fe) border-box;
   min-height: 20vh;
-  width: 80%;
+  width: 90%;
   overflow-y: scroll;
   padding: 5px;
 }

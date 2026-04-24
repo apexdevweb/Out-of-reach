@@ -1,5 +1,6 @@
 <section class="home__container">
   <ul class="users__list--container">
+    <li class="users_list--sticker">Online members</li>
     <?php
     foreach ($user_list as $user_profil) {
     ?>

@@ -1,7 +1,7 @@
 <?php
 class Encryptor
 {
-    // LA clé doit faire 32 caractères pour l'AES-256
+    // LA clé secrète doit faire 32 caractères pour l'AES-256
     private static $key = "77aa51799d148c13be0a86d3e66b33b7";
     private static $cipher = "aes-256-gcm";//AES-256 Galois-Counter-Mode
     public static function encrypt($data)
@@ -12,7 +12,7 @@ class Encryptor
         // Le tag est récupéré par référence
         $encrypted = openssl_encrypt($data, self::$cipher, self::$key, OPENSSL_RAW_DATA, $iv, $tag);
         
-        // On stocke IV + TAG + DONNÉES
+        // On stocke IV(Initialisation Vector) + TAG + DONNÉES
         // Le tag GCM fait par défaut 16 octets
         $payload = $iv . $tag . $encrypted;
         

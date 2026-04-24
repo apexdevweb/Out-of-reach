@@ -20,27 +20,33 @@
     <article class="tools__el">
       <header class="tools__el--header">
         <hgroup class="tools__el--title-ctnr">
-          <h4></h4>
-          <h5></h5>
+          <h4 class="tools__title">Berserker</h4>
         </hgroup>
         <ul class="tools__icone--container">
-          <li class="tools__icone--el"></li>
-          <li class="tools__icone--el"></li>
-          <li class="tools__icone--el"></li>
-          <li class="tools__icone--el"></li>
-          <li class="tools__icone--el"></li>
-          <li class="tools__icone--el"></li>
+          <li class="tools__icone--el"><?= DataText::TYPE_OF_TOOL_A ?></li>
+          <li class="tools__icone--el"><?= DataText::TYPE_OF_TOOL_B ?></li>
+          <li class="tools__icone--el"><?= DataText::TYPE_OF_TOOL_C ?></li>
+          <li class="tools__icone--el"><img src="<?= DataLink::MAJORIS_PICT ?>" alt="MajorisLogo" class="threat__level--tools"></li>
         </ul>
       </header>
-      <p class="tools__detail"></p>
       <figure class="tools__img--container">
         <picture class="tools__img--wrapper">
-          <source media="(min-width: 600px)" srcset="" type="image/webp">
-          <img src="" alt="berserkerImg">
+          <source media="(min-width: 300px)" srcset="<?= DataLink::BERSERKER_PICT ?>" type="image/webp">
+          <img src="<?= DataLink::BERSERKER_PICT ?>" class="tools__img--el" alt="berserkerImg">
         </picture>
-        <figcaption class="tools__date--caption"></figcaption>
+        <div class="manufacturing__container--tools">
+          <h6 class="tools__making--title"><?= DataText::TOOLS_MAKING_TITLE ?></h6>
+          <div class="manufacturing__sub--container">
+            <img src="<?= DataLink::RUST_PICT ?>" class="tools__making--language" alt="rustPict">
+            <img src="<?= DataLink::PYTHON_PICT ?>" class="tools__making--language" alt="PYPict">
+            <img src="<?= DataLink::JAVASCRIPT_PICT ?>" class="tools__making--language" alt="jsPict">
+          </div>
+          <hr class="tools__separate">
+          <div class="tools__foot">
+            <a href="<?= Encryptor::encrypt(DataLink::BERSERKER_DOWNLOAD) ?>" download="berserker.zip" class="tools__link"><?= DataText::DOWNLOAD_INFO_TXT ?></a>
+          </div>
+        </div>
       </figure>
-      <footer class="tools__foot"></footer>
     </article>
   </div>
 </section>

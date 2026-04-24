@@ -1,0 +1,63 @@
+@use "../components/placeholders";
+@use "../components/variables";
+.enroll__container {
+  @extend %flex-column-center;
+  margin-top: 25vh;
+  height: auto;
+  width: 100%;
+  z-index: 99;
+  border: 1px solid #899;
+  & .enroll__title {
+    color: #fff;
+    font-family: variables.$font-beta;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  & .enroll__status {
+    color: #899;
+    font-family: variables.$font-ceta;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  & .enroll__vid--container {
+    @extend %flex-column-center;
+    height: 300px;
+    width: 400px;
+    border: 1px solid #899;
+    overflow: hidden;
+    & .enroll__vid {
+      height: 100%;
+      width: 100%;
+    }
+    & .enroll__canvas {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+  }
+  & .enroll__btn {
+    margin: 5px;
+    height: 4vh;
+    width: auto;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    color: #899;
+    font-size: 1.2rem;
+    font-family: variables.$font-alpha;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      color: #fff;
+      background-color: #000;
+      cursor: pointer;
+    }
+  }
+}

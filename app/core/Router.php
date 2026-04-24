@@ -1,14 +1,16 @@
 <?php
-require_once __DIR__ . "/../models/AdminManager.php";
-require_once __DIR__ . "/Encryptor.php";
+require_once __DIR__ . "/../models/ShieldManager.php"; //import du manager shield
+require_once __DIR__ . "/../models/AdminManager.php"; //import du manager admin
+require_once __DIR__ . "/Encryptor.php"; //import de l'encryptor
 
 $adminManager = new AdminManager(); //On instancie le manager
 $userIp = $_SERVER['REMOTE_ADDR']; // On récupère l'ip du visiteur
 // On vérifie si l'ip du visiteur figure dans la blacklist, si oui on bloque l'accés
 if ($adminManager->verifyToBlacklist($userIp)) {
   http_response_code(403);
-  die("<h1 style='color:red;text-align:center;'>Accès Interdit</h1>
-       <p style='text-align:center;'>Vous êtes bannie.</p>");
+  die("<div style='position: fixed; top: 0; left: 0; display: flex; align-items: center; justify-content: center; height: 100vh; width: 100%; z-index: 999; background-color: #000;'>
+  <p style='color: #fff; font-size: 4rem; text-align: center; letter-spacing: 2px;'>YOU ARE BANNED</p>
+  </div>");
 }
 // On initialise la navigation autorisé
 const AVAILABLE_ROUTES = [
@@ -19,6 +21,7 @@ const AVAILABLE_ROUTES = [
   'tips' => 'TipsController',
   'forum' => 'ForumController',
   'logout' => 'LogoutController',
+  'face_register' => 'ShieldController',
 ];
 
 //on récupère la page de guard (l'index) → le shield
@@ -31,6 +34,8 @@ if (isset($_GET['page'])) {
     $page = $decrypted;
   } else {
     // Si le token est invalide ou tentative de modification la signature HMAC sera déclaré corrompue
+    $shield_ip_block = new ShieldManager();
+    $shield_ip_block->shieldToBlacklist($userIp);
     http_response_code(403);
     die("<div style='position: fixed; top: 0; left: 0; display: flex; align-items: center; justify-content: center; height: 100vh; width: 100%; z-index: 999; background-color: #000;'>
     <p style='color: #fff; font-size: 4rem; text-align: center; letter-spacing: 2px;'>ERROR(403):URL corruption attempt you are blocked.</p>
@@ -74,15 +79,11 @@ if (file_exists($controllerFile)) {
       header("Location: index.php?page=" . $home_encrypted);
       exit();
     }
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $app->accessControll();
-    } else {
-      $_SESSION = [];
-      session_destroy();
-      session_start();
-    }
+    $app->accessControll();
     $app->insertionVisits();
     $app->guardPage();
+  } elseif ($page === 'face_register') {
+    $app->faceRegisterPage();
   } elseif ($page === 'home') {
     $app->homePage();
   } elseif ($page === 'administration') {

@@ -19,4 +19,10 @@ class DataLink {
   public const MINORIS_PICT = "public/assets/images/minorisIcon.png";
   public const MAJORIS_PICT = "public/assets/images/majorisIcon.png";
   public const TERMINUS_PICT = "public/assets/images/terminusIcon.png";
+  public const BERSERKER_PICT = "public/assets/images/toolsIMG/BerserkerPict.JPG";
+  public const RUST_PICT = "public/assets/images/toolsIMG/rustLogo.png";
+  public const PYTHON_PICT = "public/assets/images/toolsIMG/pythonLogo.png";
+  public const JAVASCRIPT_PICT = "public/assets/images/toolsIMG/jsLogo.png";
+  public const DOWNLOAD_LOGO = "public/assets/images/dlicon.png";
+  public const BERSERKER_DOWNLOAD = "public/uploads";
 }

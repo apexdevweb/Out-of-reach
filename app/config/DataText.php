@@ -1,5 +1,4 @@
 <?php
-
 class DataText
 {
   public const PRIMARY_TITLE = "OUT OF REACH";
@@ -9,7 +8,9 @@ class DataText
   public const GUARDPAGE_SLOGAN = "OPEN DOORS AND CLOSE MOUTH";
   public const GUARDPAGE_INFO = "Access impossible without invitation";
   public const GUARDPAGE_INFO_SECTOR = "Web security service community";
-  public const GUARDBTN_ENTER = "sign";
+  public const GUARDBTN_ENTER = "Sign";
+  public const GUARDBTN_PIN = "Validate";
+  public const GUARDBTN_FACE = "New Face Register";
   public const HOME_LINK = "Home";
   public const USER_LINK = "User";
   public const PROFIL_LINK = "Profil";
@@ -23,6 +24,7 @@ class DataText
   public const SECTOR_ATTACK = ">_OFFENSIVE-SECURITY";
   public const EMPTY_USER = "No users at the moment";
   public const BANNED_USER = "No banned at the moment";
+  public const FACE_INFO_REGISTER = "Your biometric data has not yet been registered ?";
   //↓↓↓constantes de navigation↓↓↓
   public const NAV_HOME = "Home";
   public const NAV_TOOL = "Tools";
@@ -41,7 +43,7 @@ class DataText
   public const RS_TITLE_ARTICLE = "RUST-ARCHITECTURE";
   public const TIPS_FOOTER_TXT = "All the architectural designs are explained in detail, including their strengths and weaknesses, and practical applications.";
   //↓↓↓constantes des articles de la section tools↓↓↓
-  public const TOOLS_INTRO = "OUT OF REACH Production";
+  public const TOOLS_INTRO = "OUT OF REACH PRODUCTION";
   public const THREAT_TITLE = "Threat-Meter:";
   public const THREAT_MINORIS_LVL = "Minoris";
   public const THREAT_MAJORIS_LVL = "Majoris";
@@ -54,4 +56,11 @@ class DataText
   public const TYPE_OF_TOOL_F = "Scams";
   public const TYPE_OF_TOOL_G = "Password Cracking";
   public const TYPE_OF_TOOL_H = "Trojan";
+  public const TOOLS_MAKING_TITLE = "Manufacturing language";
+  public const DOWNLOAD_INFO_TXT = "FREE DOWNLOAD";
+  //↓↓↓constantes de l'enregistrement des données biométrics tools↓↓↓
+  public const LOGIN_FACE_TITLE = "Biometric Authentification Required";
+  public const FACE_ENROLL_TITLE = "Biometric Enrollment";
+  public const FACE_ENROLL_STATUS = "Loading AI...";
+
 }
