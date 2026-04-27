@@ -694,16 +694,20 @@ body {
         overflow: hidden;
         border: 1px solid #444;
         & .tools__el--header {
-          @extend %globale-size, %flex-row-start;
+          @extend %globale-size, %reset-marg-pad, %flex-row-start;
           & .tools__el--title-ctnr {
-            @extend %globale-size, %flex-row-start;
+            @extend %globale-size, %reset-marg-pad;
             & .tools__title {
               margin: 0;
-              font-size: 3.4rem;
+              padding: 0;
+              font-size: 2.4rem;
               color: #fff;
               font-family: variables.$font-alpha;
               letter-spacing: 4px;
               text-shadow: 0px 0px 5px #000;
+              line-height: 35px;
+              width: 100%;
+              text-align: center;
             }
           }
           & .tools__icone--container {
@@ -720,11 +724,18 @@ body {
               letter-spacing: 1px;
               background-color: rgba(0, 0, 0, 0.858);
               border-radius: 5px;
-              & .threat__level--tools {
+              & .threat__majoris--tools {
                 height: 5vh;
                 width: auto;
                 background-color: rgb(255, 183, 48);
                 box-shadow: 0px 0px 5px 1px rgb(255, 183, 48);
+                border-radius: 10px;
+              }
+              & .threat__terminus--tools {
+                height: 5vh;
+                width: auto;
+                background-color: rgb(255, 55, 0);
+                box-shadow: 0px 0px 5px 1px rgb(255, 55, 0);
                 border-radius: 10px;
               }
             }
