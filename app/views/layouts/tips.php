@@ -11,19 +11,19 @@
       <figure class="tips__img--container">
         <div class="tips__link--container">
           <strong class="tips__link--title">Javascript</strong>
-          <a href="#" class="tips__link">>_</a>
+          <a href="index.php?page=<?= Encryptor::encrypt('js_structure') ?>" class="tips__link">>_</a>
         </div>
         <div class="tips__link--container">
         <strong class="tips__link--title">Php</strong>
-          <a href="#" class="tips__link">>_</a>
+          <a href="index.php?page=<?= Encryptor::encrypt('php_structure') ?>" class="tips__link">>_</a>
         </div>
         <div class="tips__link--container">
         <strong class="tips__link--title">Python</strong>
-          <a href="#" class="tips__link">>_</a>
+          <a href="index.php?page=<?= Encryptor::encrypt('py_structure') ?>" class="tips__link">>_</a>
         </div>
         <div class="tips__link--container">
         <strong class="tips__link--title">Rust</strong>
-          <a href="#" class="tips__link">>_</a>
+          <a href="index.php?page=<?= Encryptor::encrypt('rust_structure') ?>" class="tips__link">>_</a>
         </div>
         <figcaption class="tips__img--caption"></figcaption>
       </figure>

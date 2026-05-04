@@ -1,5 +1,4 @@
-*/<?php
-
+<?php
 class User
 {
   private int $user_id;

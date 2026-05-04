@@ -5,6 +5,7 @@
 @use "abstract/keyframes";
 @use "abstract/chart";
 @use "abstract/faceRegister";
+@use "abstract/tipsStructure";
 
 html {
   overflow-x: hidden;
@@ -193,19 +194,37 @@ body {
             width: 8vw;
           }
         }
-
-        & .logo__data {
-          margin: 0;
-          position: relative;
-          height: 6vh;
+        & .supervising__container {
+          @extend %flex-row-center;
+          height: auto;
           width: auto;
-        }
-
-        & #mouse_data {
-          top: 10%;
-          left: 86%;
-          position: absolute;
-          width: 6ch;
+          padding: 5px;
+          background-color: rgba(0, 0, 0, 0.386);
+          border-radius: 10px;
+          flex-shrink: 0;
+          & .logo__data {
+            margin: 0;
+            height: 6vh;
+            width: auto;
+          }
+          & #mouse_data {
+            margin: 0;
+            width: 6ch;
+          }
+          & .info__click--container {
+            @extend %flex-column-center, %reset-marg-pad;
+            height: auto;
+            width: auto;
+            & #mouse_click_data {
+              @extend %reset-marg-pad;
+              text-align: center;
+              width: 20ch;
+            }
+            & #info_click_data {
+              @extend %reset-marg-pad;
+              text-align: left;
+            }
+          }
         }
       }
     }
@@ -493,6 +512,8 @@ body {
                 flex-flow: row wrap;
                 align-items: flex-start;
                 justify-content: center;
+                background-color: rgba(0, 0, 0, 0.386);
+                border-radius: 10px;
                 & .pin_key {
                   margin: 5px;
                   height: 30px;
@@ -725,6 +746,7 @@ body {
               background-color: rgba(0, 0, 0, 0.858);
               border-radius: 5px;
               & .threat__majoris--tools {
+                padding: 5px;
                 height: 5vh;
                 width: auto;
                 background-color: rgb(255, 183, 48);
@@ -732,6 +754,7 @@ body {
                 border-radius: 10px;
               }
               & .threat__terminus--tools {
+                padding: 5px;
                 height: 5vh;
                 width: auto;
                 background-color: rgb(255, 55, 0);

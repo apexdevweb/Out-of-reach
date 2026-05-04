@@ -5,7 +5,7 @@ class DataText
   public const SECONDARY_TITLEA = "Defensive-security";
   public const SECONDARY_TITLEB = "Offensive-security";
   public const SECONDARY_TITLEC = "Web-engineering";
-  public const GUARDPAGE_SLOGAN = "OPEN DOORS AND CLOSE MOUTH";
+  public const GUARDPAGE_SLOGAN = "OPENS DOORS AND CLOSES MOUTHS";
   public const GUARDPAGE_INFO = "Access impossible without invitation";
   public const GUARDPAGE_INFO_SECTOR = "Web security service community";
   public const GUARDBTN_ENTER = "Sign";
@@ -65,5 +65,14 @@ class DataText
   public const LOGIN_FACE_TITLE = "Biometric Authentification Required";
   public const FACE_ENROLL_TITLE = "Biometric Enrollment";
   public const FACE_ENROLL_STATUS = "Loading AI...";
+  //↓↓↓constantes des architectures aux languages de programation ↓↓↓
+  public const JS_STRUCT_TITLE = "Javascript Architectures";
+  public const JS_STRUCT_SUBTITLE = "Detailed architectures for various websites and JavaScript applications";
+  public const PHP_STRUCT_TITLE = "Php Architectures";
+  public const PHP_STRUCT_SUBTITLE = "Detailed architectures for various websites and Php applications";
+  public const PY_STRUCT_TITLE = "Python Architectures";
+  public const PY_STRUCT_SUBTITLE = "Detailed architectures for various websites and Python applications";
+  public const RUST_STRUCT_TITLE = "Rust Architectures";
+  public const RUST_STRUCT_SUBTITLE = "Detailed architectures for various websites and Rust applications";
 
 }

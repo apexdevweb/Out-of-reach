@@ -26,4 +26,5 @@ class DataLink {
   public const JAVASCRIPT_PICT = "public/assets/images/toolsIMG/jsLogo.png";
   public const DOWNLOAD_LOGO = "public/assets/images/dlicon.png";
   public const BERSERKER_DOWNLOAD = "public/uploads";
+    //↓↓↓constantes des articles de la section tools↓↓↓
 }

@@ -22,6 +22,10 @@ const AVAILABLE_ROUTES = [
   'forum' => 'ForumController',
   'logout' => 'LogoutController',
   'face_register' => 'ShieldController',
+  'js_structure' => 'jsStructController',
+  'php_structure' => 'phpStructController',
+  'py_structure' => 'pyStructController',
+  'rust_structure' => 'rustStructController',
 ];
 
 //on récupère la page de guard (l'index) → le shield
@@ -48,7 +52,7 @@ if (!array_key_exists($page, AVAILABLE_ROUTES)) {
 }
 
 //on stocke les pages avec connexion requise (SESSION) dans un tableau
-$protected_private_page = ['home', 'administration', 'logout', 'tools', 'tips', 'forum'];
+$protected_private_page = ['home', 'administration', 'logout', 'tools', 'tips', 'forum', 'js_structure', 'php_structure', 'py_structure', 'rust_structure'];
 
 //on verifie que la page demander par l'utilisateur figure biens dans le tableau de pages avec connexion requise
 if (in_array($page, $protected_private_page)) {
@@ -96,6 +100,14 @@ if (file_exists($controllerFile)) {
     $app->tipsPage();
   } elseif ($page === 'forum') {
     $app->forumPage();
+  } elseif ($page === 'js_structure') {
+    $app->jsPage();
+  } elseif ($page === 'php_structure') {
+    $app->phpPage();
+  } elseif ($page === 'py_structure') {
+    $app->pyPage();
+  } elseif ($page === 'rust_structure') {
+    $app->rustPage();
   }
 } else {
   echo "Controleur introuvable";
