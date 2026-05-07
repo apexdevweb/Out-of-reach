@@ -1,5 +1,6 @@
 <?php
 class DataScript {
+    public const STRUCT_CASE_ANIME = "public/assets/JS/structElAnime.js";
     public const MOUSE_DATA = "public/assets/JS/mouseData.js";
     public const FLAG_MENU = "public/assets/JS/flagMenu.js";
     public const CHART_JS = "public/assets/JS/myChart.js";

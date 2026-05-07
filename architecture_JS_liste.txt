@@ -13,6 +13,7 @@ Simple à développer
 Déploiement unique
 ➤ Inconvénients
 Difficile à scaler
+
 🧩 2. Architecture SPA (Single Page Application)
 ➤ Principe
 

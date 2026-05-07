@@ -1,10 +1,12 @@
 <section class="struct__container">
-<hgroup class="struct__title--container">
-  <h2 class="struct__title"><?= DataText::JS_STRUCT_TITLE ?></h2>
-  <h3 class="struct__sub--title"><?= DataText::JS_STRUCT_SUBTITLE ?></h3>
-</hgroup>
+  <hgroup class="struct__title--container">
+    <h2 class="struct__title"><?= DataText::JS_STRUCT_TITLE ?></h2>
+    <h3 class="struct__sub--title"><?= DataText::JS_STRUCT_SUBTITLE ?></h3>
+  </hgroup>
   <div class="parent">
-    <div class="grid__el--ctnr">1</div>
+    <div class="grid__el--ctnr">
+      <h2 class="grid__el--title"><?= DataTextStructure::MONOLITHIQUE_JS_TITLE ?></h2>
+    </div>
     <div class="grid__el--ctnr">2</div>
     <div class="grid__el--ctnr">3</div>
     <div class="grid__el--ctnr">4</div>

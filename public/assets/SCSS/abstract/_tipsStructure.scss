@@ -37,12 +37,31 @@
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
     & .grid__el--ctnr {
+      @extend %flex-column-center, %reset-marg-pad;
       min-height: 15vh;
       min-width: 15vw;
       background-color: #000;
       border-radius: 5px;
+      color: #fff;
+      font-family: variables.$font-beta;
+      transition: 0.5s ease-in-out;
       &:hover {
         box-shadow: 0px 0px 5px #fff;
+        cursor: pointer;
+      }
+      & .grid__el--title {
+        text-align: center;
+        font-size: 1rem;
+        width: 20ch;
+        letter-spacing: 1px;
+      }
+      &.case__expansion {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 30vh;
+        width: 30vw;
       }
     }
   }
