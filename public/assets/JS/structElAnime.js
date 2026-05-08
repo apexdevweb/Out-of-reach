@@ -2,6 +2,10 @@ const allCase = document.querySelectorAll(".grid__el--ctnr");
 
 allCase.forEach((myCases) => {
   myCases.addEventListener("click", () => {
-      myCases.classList.toggle("case__expansion");
+    if (myCases.classList.contains("case__expansion")) {
+      myCases.classList.remove("case__expansion");
+    } else {
+      myCases.classList.add("case__expansion");
+    }
   });
 });

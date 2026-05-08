@@ -6,6 +6,13 @@
   <div class="parent">
     <div class="grid__el--ctnr">
       <h2 class="grid__el--title"><?= DataTextStructure::MONOLITHIQUE_JS_TITLE ?></h2>
+      <ul class="grid__sub--container">
+        <li class="grid__el--info"><p><?= DataTextStructure::MONOLITHIQUE_JS_DESCRIPTION_A ?></p></li>
+        <li class="grid__el--info"><p><?= DataTextStructure::MONOLITHIQUE_JS_DESCRIPTION_B ?></p></li>
+        <li class="grid__el--info"><p><?= DataTextStructure::MONOLITHIQUE_JS_DESCRIPTION_C ?></p></li>
+        <li class="grid__el--info"><p><?= DataTextStructure::MONOLITHIQUE_JS_DESCRIPTION_D ?></p></li>
+        <li class="grid__el--info"><p><?= DataTextStructure::MONOLITHIQUE_JS_DESCRIPTION_E ?></p></li>
+      </ul>
     </div>
     <div class="grid__el--ctnr">2</div>
     <div class="grid__el--ctnr">3</div>
