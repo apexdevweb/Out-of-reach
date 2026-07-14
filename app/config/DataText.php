@@ -59,6 +59,7 @@ class DataText
   public const TYPE_OF_TOOL_I = "Account Cracking";
   public const TYPE_OF_TOOL_J = "DDOS";
   public const TYPE_OF_TOOL_K = "R.A.T";
+  public const TYPE_OF_TOOL_L = "KeyLogger";
   public const TOOLS_MAKING_TITLE = "Manufacturing language";
   public const DOWNLOAD_INFO_TXT = "FREE DOWNLOAD";
   //↓↓↓constantes de l'enregistrement des données biométrics tools↓↓↓
