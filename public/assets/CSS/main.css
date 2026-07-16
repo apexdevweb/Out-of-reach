@@ -329,7 +329,6 @@ body .main__header {
   position: fixed;
   top: 0;
   border: 1px solid #444;
-  background-color: #000;
   z-index: 99;
 }
 body .main__header .primary__title {
