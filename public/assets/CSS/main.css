@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
-body, body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .main__header .small__subtitle--container .subtitle__el .supervising__container .info__click--container, body .main__header .small__subtitle--container .subtitle__el .supervising__container .info__click--container #mouse_click_data, body .main__header .small__subtitle--container .subtitle__el .supervising__container .info__click--container #info_click_data, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .facial__container, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tools__container .threat__wrapper, body .tools__container .threat__wrapper .threat__container .threat__el, body .tools__container .tools__wrapper .tools__el .tools__el--header, body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__el--title-ctnr, body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__icone--container, body .tools__container .tools__wrapper .tools__el .tools__img--container, body .tools__container .tools__wrapper .tools__el .tools__img--container .tools__img--wrapper, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__making--title, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .manufacturing__sub--container, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__foot .tools__link, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .tips__container .tips__sub--container .tips__el .tips__el--foot, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .struct__container .struct__title--container, .struct__container .parent .grid__el--ctnr, .struct__container .parent .grid__el--ctnr .grid__sub--container, .chart__container .chart__visitor--container .infos__visitor {
+body, body .main__header, body .main__header .globale__nav--container, body .main__header .globale__nav--container .nave__sub--container, body .main__header .profil__card .profil__sub--container, body .main__header .profil__card .profil__btn--container, body .main__header .small__subtitle--container, body .main__header .small__subtitle--container .subtitle__el .supervising__container .info__click--container, body .main__header .small__subtitle--container .subtitle__el .supervising__container .info__click--container #mouse_click_data, body .main__header .small__subtitle--container .subtitle__el .supervising__container .info__click--container #info_click_data, body .shield__container, body .shield__container .shield__hero--wrapper, body .shield__container .shield__hero--wrapper .facial__container, body .shield__container .shield__hero--wrapper .shield__hero--content .hero__sub--content .shield__hero--sectorInfo, body .home__container .sector__container, body .home__container .sector__container .sector__choice, body .tools__container .threat__wrapper, body .tools__container .threat__wrapper .threat__container .threat__el, body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__el--title-ctnr, body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__icone--container, body .tools__container .tools__wrapper .tools__el .tools__img--container, body .tools__container .tools__wrapper .tools__el .tools__img--container .tools__img--wrapper, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__making--title, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .manufacturing__sub--container, body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools .tools__foot .tools__link, body .tips__container .tips__sub--container .tips__el .tips__el--head, body .tips__container .tips__sub--container .tips__el .tips__el--head .tips__el--title-container, body .tips__container .tips__sub--container .tips__el .tips__img--container, body .tips__container .tips__sub--container .tips__el .tips__img--container .tips__link--container, body .tips__container .tips__sub--container .tips__el .tips__el--foot, body .administration__container .administration__wrapper, body .administration__container .administration__wrapper .administration__sub--container, body .administration__container .administration__wrapper .administration__sub--container .key__container, body .administration__container .administration__wrapper .administration__sub--container .infos__banned, .struct__container .struct__title--container, .struct__container .parent .grid__el--ctnr, .struct__container .parent .grid__el--ctnr .grid__sub--container, .chart__container .chart__visitor--container .infos__visitor {
   margin: 0;
   padding: 0;
 }
@@ -326,7 +326,6 @@ body .shield__vid {
 body .main__header {
   height: auto;
   width: 100%;
-  position: fixed;
   top: 0;
   border: 1px solid #444;
   z-index: 99;
@@ -773,7 +772,7 @@ body .shield__container .shield__hero--wrapper .shield__hero--content .shield__f
   cursor: pointer;
 }
 body .home__container {
-  margin-top: 16vh;
+  margin-top: 0;
   height: 100vh;
   width: 100%;
   background: url("../images/wallpapper_B.jpg") no-repeat 50% 50%;
@@ -841,7 +840,7 @@ body .home__container .sector__container .sector__choice .sector__choice--title 
   text-shadow: 0px 0px 5px 3px #000;
 }
 body .tools__container {
-  margin-top: 16vh;
+  margin-top: 0;
   height: 100vh;
   width: 100%;
   background: url("../images/wallpapper_B.jpg") no-repeat 50% 50% fixed;
@@ -934,6 +933,10 @@ body .tools__container .tools__wrapper .tools__el {
   overflow: hidden;
   border: 1px solid #444;
 }
+body .tools__container .tools__wrapper .tools__el .tools__el--header {
+  padding: 8px;
+  margin: 0;
+}
 body .tools__container .tools__wrapper .tools__el .tools__el--header .tools__el--title-ctnr .tools__title {
   margin: 0;
   padding: 0;
@@ -982,9 +985,10 @@ body .tools__container .tools__wrapper .tools__el .tools__img--container .tools_
 }
 body .tools__container .tools__wrapper .tools__el .tools__img--container .tools__img--wrapper .tools__img--el {
   margin: 0;
-  height: auto;
-  width: 30vw;
+  max-height: 32vh;
+  width: auto;
   border-radius: 10px;
+  box-shadow: 0px 0px 18px 15px #000;
 }
 body .tools__container .tools__wrapper .tools__el .tools__img--container .manufacturing__container--tools {
   overflow: hidden;
@@ -1034,7 +1038,7 @@ body .tools__container .tools__wrapper .tools__el .tools__img--container .manufa
   text-shadow: 0px 0px 4px #fff;
 }
 body .tips__container {
-  margin-top: 16vh;
+  margin-top: 0;
   height: 100vh;
   width: 100%;
   background: url("../images/wallpapper_B.jpg") no-repeat 50% 50% fixed;

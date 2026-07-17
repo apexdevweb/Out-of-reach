@@ -22,6 +22,7 @@ class DataLink {
   public const BERSERKER_PICT = "public/assets/images/toolsIMG/BerserkerPict.JPG";
   public const IFN_PICT = "public/assets/images/toolsIMG/ifn.JPG";
   public const BDV_PICT = "public/assets/images/toolsIMG/BadassViewerPicture.JPG";
+  public const PSE_PICT = "public/assets/images/toolsIMG/pse.JPG";
   public const RUST_PICT = "public/assets/images/toolsIMG/rustLogo.png";
   public const PYTHON_PICT = "public/assets/images/toolsIMG/pythonLogo.png";
   public const JAVASCRIPT_PICT = "public/assets/images/toolsIMG/jsLogo.png";

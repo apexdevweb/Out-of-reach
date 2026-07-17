@@ -91,7 +91,36 @@
       <figure class="tools__img--container">
         <picture class="tools__img--wrapper">
           <source media="(min-width: 300px)" srcset="<?= DataLink::BDV_PICT ?>" type="image/webp">
-          <img src="<?= DataLink::BERSERKER_PICT ?>" class="tools__img--el" alt="berserkerImg">
+          <img src="<?= DataLink::BDV_PICT ?>" class="tools__img--el" alt="bdvImg">
+        </picture>
+        <div class="manufacturing__container--tools">
+          <h6 class="tools__making--title"><?= DataText::TOOLS_MAKING_TITLE ?></h6>
+          <div class="manufacturing__sub--container">
+            <img src="<?= DataLink::RUST_PICT ?>" class="tools__making--language" alt="rustPict">
+            <img src="<?= DataLink::JAVASCRIPT_PICT ?>" class="tools__making--language" alt="jsPict">
+          </div>
+          <hr class="tools__separate">
+          <div class="tools__foot">
+            <a href="<?= Encryptor::encrypt(DataLink::BERSERKER_DOWNLOAD) ?>" download="berserker.zip" class="tools__link"><?= DataText::DOWNLOAD_INFO_TXT ?></a>
+          </div>
+        </div>
+      </figure>
+    </article>
+    <article class="tools__el">
+      <header class="tools__el--header">
+        <hgroup class="tools__el--title-ctnr">
+          <h4 class="tools__title">Password Eaters</h4>
+        </hgroup>
+        <ul class="tools__icone--container">
+          <li class="tools__icone--el"><?= DataText::TYPE_OF_TOOL_G ?></li>
+          <li class="tools__icone--el"><?= DataText::TYPE_OF_TOOL_M ?></li>
+          <li class="tools__icone--el"><img src="<?= DataLink::TERMINUS_PICT ?>" alt="TerminusLogo" class="threat__terminus--tools"></li>
+        </ul>
+      </header>
+      <figure class="tools__img--container">
+        <picture class="tools__img--wrapper">
+          <source media="(min-width: 300px)" srcset="<?= DataLink::PSE_PICT ?>" type="image/webp">
+          <img src="<?= DataLink::PSE_PICT ?>" class="tools__img--el" alt="pseImg">
         </picture>
         <div class="manufacturing__container--tools">
           <h6 class="tools__making--title"><?= DataText::TOOLS_MAKING_TITLE ?></h6>
