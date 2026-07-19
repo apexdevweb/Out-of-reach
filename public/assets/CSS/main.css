@@ -318,9 +318,9 @@ body {
   background-color: #000;
 }
 body .shield__vid {
+  margin-top: -100px;
   height: auto;
   width: 100%;
-  margin-top: 0;
   z-index: 0;
 }
 body .main__header {

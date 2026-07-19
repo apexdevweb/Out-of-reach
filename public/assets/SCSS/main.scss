@@ -15,11 +15,10 @@ body {
   @extend %reset-marg-pad;
   box-sizing: border-box;
   background-color: #000;
-
   & .shield__vid {
+    margin-top: -100px;
     height: auto;
     width: 100%;
-    margin-top: 0;
     z-index: 0;
   }
 
@@ -232,7 +231,6 @@ body {
   & .shield__container {
     @extend %reset-marg-pad, %globale-size;
     overflow: hidden;
-
     & .shield__hero--wrapper {
       @extend %reset-marg-pad, %flex-column-center;
       height: 100vh;
